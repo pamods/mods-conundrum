@@ -1,0 +1,55 @@
+#cSketchJS {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#cSketchJS_toolbox {
+}
+
+#cSketchJS_toolbox_content {
+	background-color: rgba(255,255,255,.5);
+	background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%,rgba(204,204,204,0.6) 100%);
+	height: auto;
+	width: 45px;
+	padding: 10px;
+	padding-top: 5px;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+#cSketchJS_toolbox_content a {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	margin-top: 10px;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.95);
+	border: 1px solid rgba(0,0,0,.5);
+}
+
+#cSketchJS_toolbox_content hr {
+	display: block;
+	height: 1px;
+    	border: 0;
+    	border-top: 1px solid rgb(204,204,204);
+    	padding: 0;
+	margin-top: 12px;
+	margin-bottom: 0;
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_line {
+	background-color: #CCC;
+	background-image: url(coui://ui/mods/cSketchJS/images/line.png);
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_arrow {
+	background-color: #CCC;
+	background-image: url(coui://ui/mods/cSketchJS/images/arrow.png);
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_clear {
+	background-color: #CCC;
+	background-image: url(coui://ui/mods/cSketchJS/images/erase.png);
+}

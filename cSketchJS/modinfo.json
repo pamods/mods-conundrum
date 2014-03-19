@@ -1,0 +1,28 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cSketchJS",
+    "display_name": "Sketch Tools For Casters",
+    "description": "Adds a sketch.js layer over the game window so that casters can draw lines or arrows on the screen.",
+    "author": "Captain Conundrum, Lavasnake, martenus",
+    "version": "0.1.0",
+    "build": "62857",
+    "date": "2014/03/19",
+    "signature": "not yet implemented",
+    "forum": "",
+    "category": [
+        "in-game",
+        "ui"
+    ],
+    "live_game": [
+        "coui://ui/mods/cSketchJS/sketch.js",
+        "coui://ui/mods/cSketchJS/LavaDraw.js",
+        "coui://ui/mods/cSketchJS/cSketchJS.js",
+        "coui://ui/mods/cSketchJS/cSketchJS.css"
+    ],
+    "requires": [
+        "rFloatFrame"
+    ],
+    "id": "cSketchJS",
+    "priority": 100,
+    "enabled": true
+}
