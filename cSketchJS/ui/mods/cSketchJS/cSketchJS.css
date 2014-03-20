@@ -27,6 +27,37 @@
 	border-radius: 5px;
 	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.95);
 	border: 1px solid rgba(0,0,0,.5);
+	-webkit-filter: brightness(.9);
+}
+
+#cSketchJS_toolbox_content a:hover {
+	-webkit-filter: brightness(1.05);
+}
+
+#cSketchJS_toolbox_content a.selected {
+	-webkit-filter: brightness(1.05);
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.35);
+}
+
+#cSketchJS_toolbox_content a.tool {
+	background-color: #CCC;
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_line {
+	background-image: url(coui://ui/mods/cSketchJS/images/line.png);
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_arrow {
+	background-image: url(coui://ui/mods/cSketchJS/images/arrow.png);
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_stamp {
+	background-image: url(coui://ui/mods/cSketchJS/images/stamp.png);
+}
+
+#cSketchJS_toolbox_content a#cSketchJS_clear {
+	background-color: #CCC;
+	background-image: url(coui://ui/mods/cSketchJS/images/erase.png);
 }
 
 #cSketchJS_toolbox_content hr {
@@ -37,19 +68,4 @@
     	padding: 0;
 	margin-top: 12px;
 	margin-bottom: 0;
-}
-
-#cSketchJS_toolbox_content a#cSketchJS_line {
-	background-color: #CCC;
-	background-image: url(coui://ui/mods/cSketchJS/images/line.png);
-}
-
-#cSketchJS_toolbox_content a#cSketchJS_arrow {
-	background-color: #CCC;
-	background-image: url(coui://ui/mods/cSketchJS/images/arrow.png);
-}
-
-#cSketchJS_toolbox_content a#cSketchJS_clear {
-	background-color: #CCC;
-	background-image: url(coui://ui/mods/cSketchJS/images/erase.png);
 }
