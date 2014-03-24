@@ -38,7 +38,7 @@ var cSketchJS = (function () {
 
 	// Override the default LavaDraw StampImg and set it here.
 	// The only reason to do this is just to keep all the configs in one place.
-	LavaDraw.StampImg = "https://d3f1e1s5hz92ob.cloudfront.net/asset-version/z91a2e88bb4ecb89d84c97370febce7d9/Content/UberNetSite/images/img_item_detail_delta.png";
+	LavaDraw.StampImg = "coui://ui/mods/cSketchJS/images/scathis_full.png";
 
 	/**
 	 * UTILITY FUNCTIONS
