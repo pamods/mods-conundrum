@@ -1,0 +1,11 @@
+#ingameChartButton {
+	background-image: url(coui://ui/mods/cPAStatsCharts/chartbutton.png);
+	width: 64px;
+	height: 64px;
+	border-radius: 5px;
+	-webkit-filter: grayscale(.3) brightness(.9);
+}
+
+#ingameChartButton:hover {
+	-webkit-filter: grayscale(0) brightness(1);
+}
