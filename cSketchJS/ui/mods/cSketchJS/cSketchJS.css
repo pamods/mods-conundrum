@@ -8,6 +8,24 @@
 #cSketchJS_toolbox {
 }
 
+@-webkit-keyframes hoverAnim {
+	0% {
+		-webkit-filter: opacity(0.3) blur(2px);
+	}
+	100% {
+		-webkit-filter: opacity(1) blur(0px);
+	}
+}
+
+@-webkit-keyframes hoverOutAnim {
+	0% {
+		-webkit-filter: opacity(1) blur(0px);
+	}
+	100% {
+		-webkit-filter: opacity(0.3) blur(2px);
+	}
+}
+
 #cSketchJS_toolbox_content {
 	background-color: rgba(255,255,255,.5);
 	background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%,rgba(204,204,204,0.6) 100%);
@@ -17,6 +35,26 @@
 	padding-top: 5px;
 	border-radius: 5px;
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
+
+	-webkit-animation-name: hoverOutAnim;
+	-webkit-animation-duration: .25s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0s;
+	
+	-webkit-filter: opacity(0.3) blur(2px);
+}
+
+#cSketchJS_toolbox_content:hover {
+	-webkit-animation-name: hoverAnim;
+	-webkit-animation-duration: .25s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0s;
 }
 
 #cSketchJS_toolbox_content a {
