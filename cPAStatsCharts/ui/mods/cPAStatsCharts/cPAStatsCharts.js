@@ -58,8 +58,20 @@ var browserFrame;
 				'opacity': 0
 			}, 500, function() { $(browserDiv).hide(); });
 		};
+		//SOMEONEWHOISNOBODY CHANGES
+		/*inGameBrowser.events.open = function(data) {
+        var browserDiv = $("#inGameBrowser");
+        $(browserDiv).css('opacity', 0);
+        $(browserDiv).show();
+          
+        $(browserDiv).animate({
+            'left': '0%',
+            'opacity': 1
+        }, 500);
+    };*/
+		
 
-		$("#openInGameBrowser").remove();
+	//comment out the remove line below. 	$("#openInGameBrowser").remove();
 	};
 
 	preloadCharts();
