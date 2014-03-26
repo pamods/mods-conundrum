@@ -38,7 +38,7 @@ var cSketchJS = (function () {
 
 	// Override the default LavaDraw StampImg and set it here.
 	// The only reason to do this is just to keep all the configs in one place.
-	LavaDraw.StampImg = "coui://ui/mods/cSketchJS/images/scathis_full.png";
+	//LavaDraw.StampImg = "coui://ui/mods/cSketchJS/images/stamp_full.png";
 
 	/**
 	 * UTILITY FUNCTIONS
@@ -125,7 +125,7 @@ var cSketchJS = (function () {
 		// Attach the tools
 		$('#cSketchJS_toolbox_content').append("<a id=\"cSketchJS_line\" class=\"tool\" href='#cSketchJS' data-tool=\"marker\"></a> ");
 		$('#cSketchJS_toolbox_content').append("<a id=\"cSketchJS_arrow\" class=\"tool\" href='#cSketchJS' data-tool=\"arrow\"></a> ");
-		$('#cSketchJS_toolbox_content').append("<a id=\"cSketchJS_stamp\" class=\"tool\" href='#cSketchJS' data-tool=\"stamp\"></a> ");
+		//$('#cSketchJS_toolbox_content').append("<a id=\"cSketchJS_stamp\" class=\"tool\" href='#cSketchJS' data-tool=\"stamp\"></a> ");
 
 		$('#cSketchJS_toolbox_content').append("<hr />");
 
