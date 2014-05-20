@@ -1,0 +1,25 @@
+{
+	"servers" : [
+		{
+			"name"		: "Default Server",
+			"save_url"	: "http://1-dot-winged-will-482.appspot.com/save",
+			"search_url"	: "http://1-dot-winged-will-482.appspot.com/search"
+		},
+		{
+			"name"		: "eXodus eSports",
+			"search_url"	: "http://1-dot-exodus-esports.appspot.com/search"
+		},
+		{
+			"name"		: "PACE League",
+			"search_url"	: "http://1-dot-pa-esports.appspot.com/search"
+		},
+		{
+			"name"		: "The Realm",
+			"search_url"	: "http://1-dot-realm-sharing.appspot.com/search"
+		},
+		{
+			"name"		: "PA Stats - Deprecated",
+			"search_url"	: "http://1-dot-pastats-sharing.appspot.com/search"
+		}
+	]
+}
