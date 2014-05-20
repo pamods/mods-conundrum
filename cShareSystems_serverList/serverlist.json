@@ -16,10 +16,6 @@
 		{
 			"name"		: "The Realm",
 			"search_url"	: "http://1-dot-realm-sharing.appspot.com/search"
-		},
-		{
-			"name"		: "PA Stats - Deprecated",
-			"search_url"	: "http://1-dot-pastats-sharing.appspot.com/search"
 		}
 	]
 }
