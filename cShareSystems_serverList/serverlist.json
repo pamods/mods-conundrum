@@ -6,6 +6,10 @@
 			"search_url"	: "http://1-dot-winged-will-482.appspot.com/search"
 		},
 		{
+			"name"		: "Community Cup",
+			"search_url"	: "http://1-dot-exodus-tourney.appspot.com/search"
+		},
+		{
 			"name"		: "eXodus eSports",
 			"search_url"	: "http://1-dot-exodus-esports.appspot.com/search"
 		},
