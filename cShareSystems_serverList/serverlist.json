@@ -16,6 +16,10 @@
 		{
 			"name"		: "The Realm",
 			"search_url"	: "http://1-dot-realm-sharing.appspot.com/search"
-		}
+		},
+		{
+			"name"		: "Do-Si-Do",
+			"search_url"	: "http://1-dot-exodus-tourney.appspot.com/search"
+		},
 	]
 }
