@@ -20,6 +20,10 @@
 		{
 			"name"		: "Promethean",
 			"search_url"	: "http://1-dot-promethean-clan.appspot.com/search"
+		},
+		{
+			"name"		: "Team Burning",
+			"search_url"	: "http://1-dot-team-burning.appspot.com/search"
 		}
 	]
 }
