@@ -6,8 +6,12 @@
 			"search_url"	: "http://1-dot-winged-will-482.appspot.com/search"
 		},
 		{
-			"name"		: "eXodus eSports",
+			"name"		: "Exodus eSports",
 			"search_url"	: "http://1-dot-exodus-esports.appspot.com/search"
+		},
+		{
+			"name"		: "Exodus Clan Wars",
+			"search_url"	: "http://1-dot-exodus-league.appspot.com/search"
 		},
 		{
 			"name"		: "PACE",
