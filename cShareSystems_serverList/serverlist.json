@@ -14,10 +14,6 @@
 			"search_url"	: "http://1-dot-exodus-league.appspot.com/search"
 		},
 		{
-			"name"		: "PACE",
-			"search_url"	: "http://1-dot-pa-esports.appspot.com/search"
-		},
-		{
 			"name"		: "The Realm",
 			"search_url"	: "http://1-dot-realm-sharing.appspot.com/search"
 		},
@@ -36,6 +32,10 @@
 		{
 			"name" 		: "The Void",
 			"search_url" 	: "http://1-dot-the-void-pa.appspot.com/search"
+		},
+		{
+			"name" 		: "Super Swiss",
+			"search_url" 	: "http://1-dot-exodus-tourney.appspot.com/search"
 		}
 	]
 }
