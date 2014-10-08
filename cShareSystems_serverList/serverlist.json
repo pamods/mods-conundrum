@@ -26,10 +26,6 @@
 			"search_url"	: "http://1-dot-team-burning.appspot.com/search"
 		},
 		{
-			"name"		: "Cheddar Cup",
-			"search_url"	: "http://1-dot-community-tourney.appspot.com/search"
-		},
-		{
 			"name" 		: "The Void",
 			"search_url" 	: "http://1-dot-the-void-pa.appspot.com/search"
 		},
