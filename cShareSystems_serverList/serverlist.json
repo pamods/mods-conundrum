@@ -28,10 +28,6 @@
 		{
 			"name" 		: "The Void",
 			"search_url" 	: "http://1-dot-the-void-pa.appspot.com/search"
-		},
-		{
-			"name" 		: "Super Swiss",
-			"search_url" 	: "http://1-dot-exodus-tourney.appspot.com/search"
 		}
 	]
 }
