@@ -4,7 +4,7 @@
     "display_name": "League Of Commanders - UI",
     "description": "Client mod to be used by everyone playing League of Commanders",
     "author": "Captain Conundrum",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "build": "75539",
     "date": "2014/11/30",
     "signature": "not yet implemented",
@@ -19,6 +19,7 @@
         ]
 	 },
     "id": "cLeagueOfCommandersUi",
+    "icon": "http://i.imgur.com/0Tox4CT.png",
     "forum": "https://forums.uberent.com/threads/wip-league-of-commanders.66087/",
     "priority": 100,
     "enabled": true
