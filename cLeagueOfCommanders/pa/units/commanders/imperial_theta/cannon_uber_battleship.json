@@ -1,0 +1,43 @@
+{
+  "armor_damage_map": {
+	"AT_Structure": 0.4
+  },
+  "ammo_type": "Projectile",
+  "audio_loop": "/SE/Weapons/commander/Commander_uber_cannon_fire",
+  "burn_damage": 4000,
+  "burn_radius": 170,
+  "damage": 4000,
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Death/Commander",
+      "effect_spec": "/pa/effects/specs/metal_weapon_impact_explosion.pfx"
+    }
+  },
+  "flight_type": "Direct",
+  "full_damage_splash_radius": 20,
+  "fx_trail": {
+    "filename": "/pa/units/commanders/imperial_theta/yamato_proj_trail.pfx",
+    "offset": [
+      0.0,
+      0.0,
+      20.0
+    ]
+  },
+    "impact_decals": [
+    "/pa/effects/specs/nuke_scorch_01.json"
+  ],
+  "initial_velocity": 80.0,
+  "lifetime": 8.5,
+  "max_velocity": 80.0,
+  "physics": {
+    "add_to_spatial_db": false,
+    "allow_underground": true,
+    "ignore_gravity": false,
+    "push_class": 1,
+    "radius": 10
+  },
+  "spawn_layers": "WL_Orbital",
+  "splash_damages_allies": true,
+  "splash_damage": 4000,
+  "splash_radius": 170
+}

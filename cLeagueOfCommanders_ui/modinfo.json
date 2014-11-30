@@ -1,0 +1,25 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cLeagueOfCommandersUi",
+    "display_name": "League Of Commanders - UI",
+    "description": "Client mod to be used by everyone playing League of Commanders",
+    "author": "Captain Conundrum",
+    "version": "0.2.0",
+    "build": "75539",
+    "date": "2014/11/30",
+    "signature": "not yet implemented",
+    "category": [
+        "in-game",
+        "lobby",
+        "ui"
+    ],
+    "scenes": {
+        "new_game": [
+            "coui://ui/mods/cLeagueOfCommanders_ui/new_game.js"
+        ]
+	 },
+    "id": "cLeagueOfCommandersUi",
+    "forum": "",
+    "priority": 100,
+    "enabled": true
+}
