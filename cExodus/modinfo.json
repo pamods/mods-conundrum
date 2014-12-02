@@ -1,0 +1,37 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cExodus",
+    "display_name": "eXodus eSports",
+    "description": "Stay up to date on the latest news, events, videos and guides from eXodus eSports.",
+    "author": "eXodus eSports",
+    "version": "1.1.2",
+    "build": "73823",
+    "date": "2014/10/16",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/rel-exodus-esports.65063/",
+    "category": [
+        "main-menu",
+        "ui",
+        "tournaments"
+    ],
+    "scenes": {
+        "start": [
+            "coui://ui/mods/cExodus/js/dateFormat.js",
+            "coui://ui/mods/cExodus/js/util.js",
+            "coui://ui/mods/cExodus/cExodus.js",
+            "coui://ui/mods/cExodus/css/imported.css",
+            "coui://ui/mods/cExodus/css/cExodus.css",
+            "coui://ui/mods/cExodus/videofeed/cExodus_ytv.js",
+            "coui://ui/mods/cExodus/videofeed/cExodus_ytv.css",
+            "coui://ui/mods/cExodus/videofeed/videofeed.js",
+            "coui://ui/mods/cExodus/tabs/cExodus_tabs.js"
+        ]
+    },
+    "id": "cExodus",
+    "icon": "http://i.imgur.com/oWmip9n.png",
+    "priority": 100,
+    "enabled": true,
+    "dependencies": [
+        "com.pa.someonewhoisnobody.inGameBrowser"
+    ]
+}

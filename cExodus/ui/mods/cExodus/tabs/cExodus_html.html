@@ -1,0 +1,134 @@
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.0' type='text/css' media='all' />
+
+<div id="cExodus_container" data-bind="visible: cExodus.isReady">
+
+	<div id='cExodus_logo'>
+		<a href="http://exodusesports.com">
+			<img src='coui://ui/mods/cExodus/img/logo.png' data-bind="visible: cExodus.isNotLive">
+			<img src='coui://ui/mods/cExodus/img/live.png' data-bind="visible: cExodus.isLive">
+			<div id="cExodus_currentEvent_wrapper" data-bind="visible: cExodus.isLive"><div id="cExodus_currentEvent" data-bind="text: cExodus.currentEvent"></div></div>
+		</a>
+	</div>
+
+	<div id="cExodus_tabs">
+
+		<ul>
+			<li id="cExodus_news" class="tab-container-box">
+				<h4  class="exp-heading-tab">
+					<span id="cExodus_news_tab" class="tab">News</span>
+				</h4>
+			</li>
+
+			<li id="cExodus_events" class="tab-container-box">
+				<h4 class="exp-heading-tab">
+					<span id="cExodus_events_tab" class="tab">Events</span>
+				</h4>
+			</li>
+
+			<li id="cExodus_top10" class="tab-container-box">
+				<h4  class="exp-heading-tab">
+					<span id="cExodus_top10_tab" class="tab">Top 10</span>
+				</h4>
+			</li>
+
+			<li id="cExodus_guides" class="tab-container-box">
+				<h4 class="exp-heading-tab">
+					<span id="cExodus_guides_tab" class="tab">Guides</span>
+				</h4>
+			</li>
+		</ul>
+
+
+		<div id="cExodus_tabContent">
+
+			<!-- EVENTS -->
+			<div id="cExodus_events" class="container-box cExodus_centered">
+				<table>
+					<thead>
+						<tr><th>Date</th><th>Event</th></tr>
+					</thead>
+					<tbody data-bind="foreach: cExodus.eventSchedule">
+						<tr>
+							<td data-bind="text: new Date(parse_yyyymmdd(meta.tournament_date)).format('mmm d, yyyy')"></td>
+							<td data-bind="html: '<a href=\'' + link + '\'>' + title + '</a>'"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- NEWS -->
+			<div id="cExodus_news" class="container-box">
+				<table>
+					<tbody data-bind="foreach: cExodus.newsItems">
+						<tr>
+							<td>
+								<span class="cExodus_title" data-bind="html: '<a href=\'' + link + '\'>' + title + '</a>'"></span>
+								<span class="cExodus_whiteLink cExodus_smallText" data-bind="html: '<a href=\'' + link + '\'>' + new Date(date).format('dd mmm, yyyy') + '</a>'"></span>
+							</td>
+							<td class="cExodus_whiteLink" data-bind="html: '<a href=\'' + link + '\'>' + excerpt + '</a>'"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- TOP10 -->
+			<div id="cExodus_top10" class="container-box">
+				<ul data-bind="foreach: cExodus.top10">
+					<li>
+						<span data-bind="html: '<div>' + ($index()+1) + '</div>' + ' <a style=\'margin-left: 10px;\' href=\'http://exodusesports.com/?pastats_player_id=' + id + '\'>' + name + '</a>'"></span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- GUIDES -->
+			<div id="cExodus_guides" class="container-box">
+				<table>
+					<tbody data-bind="foreach: cExodus.guides">
+						<tr>
+							<td>
+								<div class="card-holder">
+									<div class="card_">
+										<div class="card-back">
+											<a data-bind="attr: { href: link }"><img class="cExodus_guide_img" data-bind="attr: { src: featured_image.source }"/></a>
+										</div>
+										<!--<div class="card-front">
+											<section class="author">
+												<div class="inner-container">
+
+													<h4 class="author-box-title">About the author</h4>
+
+													<div class="author-avatar">
+														<img data-bind="attr: { src: author.avatar }" width="145" height="145" class="avatar avatar-145 wp-user-avatar wp-user-avatar-145 alignnone photo">
+													</div>
+
+													<div class="author-details">
+
+														<h4 class="author-name" data-bind="text: author.name"></h4>
+
+														<span data-bind="text: author.description"></span>
+
+														<div class="socialbuttons small">
+															<a class="sbtwitch" href="http://www.twitch.tv/mrelodea" target="_blank"></a>
+															<a class="sbyoutube" href="https://www.youtube.com/channel/UClm5ZutwCA3OoMiDDCgMA7Q" target="_blank"></a>
+														</div>
+
+													</div>
+												</div>
+											</section>
+										</div>-->
+									</div>
+								</div>
+
+								<div class="cExodus_whiteLink cExodus_smallText cExodus_guideDescription_" data-bind="html: '<a href=\'' + link + '\'>' + excerpt + '</a>'"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<a href="http://exodusesports.com/guides"><div class="cExodus_rowButton">More Guides</div></a>
+			</div>
+
+		</div>
+
+	</div>
+</div>

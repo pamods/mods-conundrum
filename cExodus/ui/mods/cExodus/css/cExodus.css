@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'orbitron';
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.eot');
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.woff') format('woff'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.svg#orbitronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'orbitron';
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.eot');
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.woff') format('woff'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.svg#orbitronbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'orbitron';
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.eot');
+    src: url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.woff') format('woff'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.svg#orbitronbold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.eot');
+    src: url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.woff') format('woff'),
+    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#cExodus {
+	position: absolute;
+	top: 60px;
+	right: 450px;
+	
+	background-color: rgba(40, 40, 40, 0.8);
+	padding: 0;
+	max-width: 513px;
+}
+
+#cExodus #cExodus_logo {
+
+}
+
+#cExodus #cExodus_tabs {
+	-webkit-box-shadow: 2px -0px 20px -10px rgba(255, 206, 20, 1.0);
+	border-top: 2px solid rgba(255, 206, 20, 1.0);
+	border-bottom: 2px solid rgba(255, 206, 20, 1.0);
+	padding-left: 0px;
+}
+
+#cExodus #cExodus_tabs ul {
+	padding-left: 15px;
+}
+
+#cExodus .tab-container-box {
+	display: inline-block;
+	-webkit-border-radius: 0px;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 0px;
+	-moz-background-clip: padding;
+	border-radius: 0px;
+	background-clip: padding-box;
+	/*padding: 15px;*/
+	/*margin-bottom: 15px;*/
+	margin: 0;
+}
+
+#cExodus .tab-container-box h4 {
+	margin-left: -3px;
+	font-family: 'Orbitron';
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	color: #ffce14;
+	font-weight: 900;
+	text-transform: uppercase;
+	
+	color: rgb(255, 206, 20);
+
+	
+	cursor: pointer;
+	
+	height: 40px;
+	line-height: 20px;
+	margin-bottom: 2px;
+	margin-top: 0px;
+	position: relative;
+	/*top: -15px;*/
+	
+	/*width: 354px;*/
+}
+
+#cExodus .tab-container-box h4 .tab {
+	display: inline-block;
+	background: #ffce14;
+
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	
+	border-top: 2px solid #ffce14;
+	border-right: 2px solid #111;
+	height: 42px;
+	margin-top: 0px;
+	
+	font-family: 'Orbitron';
+	color: #000;
+	font-size: 18px;
+	font-weight: 900;
+	width: 122px;
+	text-align: center;
+}
+
+#cExodus .tab-container-box h4 .active-tab {
+	border-top: 2px solid #111;
+	height: 42px;
+	margin-top: 0px;
+	background: #111;
+	-webkit-box-shadow: inset -0px -40px 10px 0px rgba(255, 206, 20, 1.0);
+}
+
+#cExodus .container-box {
+	display: none;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+#cExodus .container-box.active-box {
+	display: block;
+}
+
+#cExodus_tabContent span {
+	display: block;
+}
+
+#cExodus_tabContent li {
+	display: inline-block;
+	width: 220px;
+}
+
+#cExodus_top10 ul {
+	margin-left: 15px;
+	margin-right: 28px;
+	padding-top: 5px;
+	-webkit-columns: 2;
+	-webkit-column-gap: 10px;
+	height: 220px;
+}
+
+#cExodus_top10 ul li:nth-child(6) {
+	position: relative;
+	top: -1px;
+}
+
+#cExodus_top10 ul li span {
+	display: inline;
+}
+
+
+#cExodus_top10 ul li span div {
+	float: left;
+}
+
+#cExodus_top10 ul li span a {
+	display: block;
+	padding-left: 10px;
+}
+
+.cExodus_alert_wrapper {
+	position: relative;
+	top: 50%;
+}
+
+.cExodus_alert {
+	text-shadow: rgba(128, 0, 0, 0.3) 0px 0px 10px !important;
+	color: rgb(128,0,0) !important;
+}
+
+#cExodus_currentEvent_wrapper {
+	display: inline-block;
+	position: relative;
+	top: -70px;
+	height: 0;
+}
+
+#cExodus_currentEvent {
+	position: absolute;
+	height: 30px;
+	width: 513px;
+	text-align: center;
+	top: 5px;
+	
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	line-height: 20px;		
+	
+	font-family: 'Orbitron';
+	color: #000;
+	font-size: 18px;
+	font-weight: 900;
+}
+
+tr td span.cExodus_whiteLink a,
+tr td.cExodus_whiteLink a,
+tr td div.cExodus_whiteLink a {
+  color: #FFF;
+}
+
+tr:hover td span.cExodus_whiteLink a,
+tr:hover td.cExodus_whiteLink a,
+tr:hover td div.cExodus_whiteLink a {
+  color: #050505;
+}
+
+.cExodus_title {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.cExodus_smallText {
+	font-size: 12px;
+}
+
+.cExodus_smallText p {
+	line-height: 16px;
+}
+
+.cExodus_guide_img {
+	width: 467px;
+	margin-bottom: 10px;
+}
+
+a .cExodus_rowButton {
+	width: 100%;
+	height: 40px;
+	
+	display: inline-block;
+	background: #ffce14;
+
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+
+	margin-top: 0px;
+	text-align: center;
+	
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-transform: uppercase;
+	
+	font-family: 'Orbitron';
+	color: #000;
+	font-size: 18px;
+	font-weight: 900;
+	
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+  	transition: 0.5s;
+}
+
+a:hover .cExodus_rowButton {
+	background: #000;
+
+	color: #FFF;
+}
+
+.container-box table {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.cExodus_centered {
+	text-align: center;
+}
+
+.cExodus_centered table {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}

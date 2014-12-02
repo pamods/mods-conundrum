@@ -1,0 +1,416 @@
+.container-box a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffce14;
+}
+.container-box a:hover {
+  color: #ad8900;
+ .container-box-decoration: none;
+}
+.container-box ul {
+  padding: 0px 0px 0px 15px;
+}
+.container-box ul > li {
+  margin-bottom: 5px;
+}
+.container-box p {
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+
+.container-box table {
+  border-collapse: separate;
+  border-spacing: 0px 5px;
+}
+.container-box table thead td {
+  font-weight: bold;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+.container-box table thead tr th {
+  border-bottom: 0px;
+  line-height: 1.42857143;
+    vertical-align: top;
+}
+.container-box table td {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.container-box table a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.container-box table tr {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #050505;
+}
+.container-box table tr:hover {
+  background-color: #ffce14;
+}
+.container-box table tr:hover td,
+.container-box table tr:hover a {
+  color: #050505;
+}
+.container-box table tr td {
+  border-top: 0px solid transparent!important;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+
+
+
+.container-box table {
+  border-collapse: separate;
+  border-spacing: 0px 5px;
+}
+.container-box ul li {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.container-box ul a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.container-box li {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #050505;
+  
+  border-top: 0px solid transparent!important;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.container-box li:hover {
+  background-color: #ffce14;
+  color: #050505;
+}
+
+.container-box li:hover a {
+  color: #050505;
+}
+
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 168px;
+}
+.card .card-front,
+.card .card-back {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.card .card-front {
+  left: 100%;
+  right: -100%;
+}
+.card .card-back {
+  left: 0%;
+  right: 0px;
+}
+.card:hover .card-front {
+  left: 0%;
+  right: 0%;
+}
+.card:hover .card-back {
+  left: -100%;
+  right: 100%;
+}
+
+
+.author {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  color: #000;
+  padding: 0px;
+
+}
+.author .inner-container {
+  background: #ffce14;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+.author .inner-container:before,
+.author .inner-container:after {
+  content: " ";
+  display: table;
+}
+.author .inner-container:after {
+  clear: both;
+}
+.author .inner-container:before,
+.author .inner-container:after {
+  content: " ";
+  display: table;
+}
+.author .inner-container:after {
+  clear: both;
+}
+.author h4 {
+  color: #000;
+}
+.author .author-name {
+  position: relative;
+  color: #000;
+  margin-top: 0px;
+  padding: 10px 0px 5px 0px;
+  border-bottom: 1px dotted #000;
+}
+.author .author-name:after {
+  position: absolute;
+  content: ' ';
+  right: 0px;
+  bottom: -10px;
+  height: 0px;
+  width: 0px;
+  border-width: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #000000 #000000 transparent transparent;
+}
+.author .author-name a {
+  color: #000;
+}
+
+
+
+.socialbuttons a {
+  margin: 10px 30px 10px 30px;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  position: relative;
+  line-height: 64px;
+  -webkit-border-radius: 32px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 32px;
+  -moz-background-clip: padding;
+  border-radius: 32px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 6px #050505;
+  -moz-box-shadow: 0 0 0 6px #050505;
+  box-shadow: 0 0 0 6px #050505;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.socialbuttons a.sbtwitter {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/twitter_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbtwitter:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/twitter_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbfacebook {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/facebook_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbfacebook:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/facebook_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbtwitch {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/twitch_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbtwitch:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/twitch_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbyoutube {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/youtube_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbyoutube:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/youtube_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbgplus {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/google-plus_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbgplus:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/google-plus_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbpastats {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/pastats_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbpastats:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/pastats_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbpaladder {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/paladder_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbpaladder:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/paladder_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbsteam {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/steam_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbsteam:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/steam_white-35.png) center no-repeat;
+}
+.socialbuttons a.sbsite {
+  background: #ffce14 url(coui://ui/mods/cExodus/img/site_black-35.png) center no-repeat;
+}
+.socialbuttons a.sbsite:hover {
+  background: #050505 url(coui://ui/mods/cExodus/img/site_white-35.png) center no-repeat;
+}
+.socialbuttons a:hover {
+  background-color: #050505;
+  -webkit-box-shadow: 0 0 0 6px #ffce14;
+  -moz-box-shadow: 0 0 0 6px #ffce14;
+  box-shadow: 0 0 0 6px #ffce14;
+}
+.socialbuttons.small {
+  margin-top: 20px;
+}
+.socialbuttons.small a {
+  -webkit-box-shadow: 0 0 0 3px #050505;
+  -moz-box-shadow: 0 0 0 3px #050505;
+  box-shadow: 0 0 0 3px #050505;
+  margin: 10px;
+  width: 32px;
+  height: 32px;
+  background-size: 60%!important;
+}
+.socialbuttons.vertical {
+  text-align: center;
+}
+
+.author .author-name {
+  margin-top: 0px;
+}
+.author .author-details {
+  width: 50%;
+  float: left;
+}
+.author .author-avatar {
+  width: 50%;
+  float: left;
+}
+.author .author-box-title {
+  position: relative;
+  display: block;
+  color: #ad8800;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #ad8800;
+}
+.author .author-box-title:after {
+  position: absolute;
+  content: ' ';
+  right: 0px;
+  bottom: -10px;
+  height: 0px;
+  width: 0px;
+  border-width: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #000000 #000000 transparent transparent;
+}
+.author .author-box-title:after {
+  border-color: #ad8800 #ad8800 transparent transparent;
+}
+.author .author-box-title {
+  display: none;
+}
+
+
+#tournament-count-down {
+  /*background-color: rgba(40, 40, 40, 0.8);*/
+  text-align: center;
+  margin-bottom: 15px;
+  position: absolute;
+  top: 2px;
+  right: 450px;
+  width: 513px;
+  text-align: center;
+}
+#tournament-count-down .c-label {
+  color: #fff;
+}
+#tournament-count-down .countdown.large {
+  background: none;
+  margin: 0px;
+  margin-left: 200px;
+  text-align: left;
+}
+#tournament-count-down .countdown.large > div {
+  font-family: 'Orbitron';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: none;
+  color: #fff;
+  display: inline-block;
+}
+#tournament-count-down .countdown.large > div > span {
+  font-size: 30px;
+  font-weight: normal;
+}
+#tournament-count-down .ce-label {
+  font-size: 12px !important;
+}
+#tournament-count-down .ce-container {
+  margin-right: 25px;
+}
+#tournament-count-down .ce-container:last-of-type {
+  margin-right: 0px;
+}
+#tournament-count-down .ce-container .ce-digit {
+  display: block;
+  letter-spacing: 4px;
+}
+
+#countdown-title {
+	position: absolute;
+	display: inline;
+	left: 0;
+	padding-left: 15px;
+	padding-top: 5px;
+	font-size: 14px;
+	max-width: 200px;
+	text-align: left;
+}

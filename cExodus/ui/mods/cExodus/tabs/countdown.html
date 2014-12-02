@@ -1,0 +1,23 @@
+<div data-bind="visible: (cExodus.countDown()[4] < 2)">
+	<div id="countdown-title" data-bind="text: cExodus.nextEvent_title"></div>
+
+	<div class="countdown large" id="count-down-502" >
+
+		<div class="ce-container">
+			<span class="ce-days"><span class="ce-days-digit ce-digit" data-bind="text: cExodus.countDown()[0]">00</span></span>
+			<span class="ce-days-label ce-label">Days</span>
+		</div>
+		<div class="ce-container">
+			<span class="ce-hours"><span class="ce-hours-digit ce-digit" data-bind="text: cExodus.countDown()[1]">00</span></span>
+			<span class="ce-hours-label ce-label">Hours</span>
+		</div>
+		<div class="ce-container">
+			<span class="ce-minutes"><span class="ce-minutes-digit ce-digit" data-bind="text: cExodus.countDown()[2]">00</span></span>
+			<span class="ce-minutes-label ce-label">Minutes</span>
+		</div>
+		<div class="ce-container">
+			<span class="ce-seconds"><span class="ce-seconds-digit ce-digit" data-bind="text: cExodus.countDown()[3]">00</span></span>
+			<span class="ce-seconds-label ce-label">Seconds</span>
+		</div>
+	</div>
+</div>
