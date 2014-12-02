@@ -16,19 +16,19 @@ cLeagueOfCommanders.commanderLeague = {
 	"AlphaCommander":			"PRoeleert",
 	"QuadSpiderOfMean":		"PRoeleert",
 	"ImperialChronoblip":	"PRoeleert",
-	"RaptorStickman9000":	"PRoeleert"
+	"RaptorStickman9000":	"PRoeleert",
+	"GammaCommander":			"Sambasti",
+	"ImperialAryst0krat":	"Sambasti",
+	"QuadGambitdfa":			"Sambasti"
 };
 
 cLeagueOfCommanders.notInLeague = [
 	"ProgenitorCommander",
-	"GammaCommander",
 	"DeltaCommander",
 	"RaptorBeast",
-	"ImperialAryst0krat",
 	"QuadShadowdaemon",
 	"QuadSacrificialLamb",
 	"QuadXinthar",
-	"QuadGambitdfa",
 	"ImperialAble",
 	"ImperialGnugfur",
 	"RaptorIwmiked",
@@ -39,7 +39,8 @@ cLeagueOfCommanders.notInLeague = [
 	"QuadTokamaktech",
 	"RaptorDiremachine",
 	"RaptorBeniesk",
-	"ImperialKapowaz"
+	"ImperialKapowaz",
+	"TankBanditks"
 ];
 
 cLeagueOfCommanders.lastArmy = 0;

@@ -3,7 +3,7 @@
    "display_name":"ZaphodX",
    "description":"AOE Combat Commander",
 
-   "max_health":13000,
+   "max_health":14000,
    "navigation":{
 	      "type":"amphibious",
 	      "acceleration":80,

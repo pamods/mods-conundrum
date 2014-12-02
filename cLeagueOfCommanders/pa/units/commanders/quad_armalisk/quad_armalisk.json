@@ -16,14 +16,14 @@
    ],
    "navigation":{
 	      "type":"air",
-	      "acceleration":60,
-	      "brake":60,
-	      "move_speed":6,
-	      "turn_speed":90,
+	      "acceleration":5,
+	      "brake":20,
+	      "move_speed":20,
+	      "turn_speed":20,
 	      "turn_in_place":true,
 	      "dodge_radius":15,
 	      "dodge_multiplier":3.0,
-	      "hover_time":9999.0
+	      "hover_time":-1
    },
    "audio":{
 		"loops":{

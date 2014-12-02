@@ -2,7 +2,7 @@
    "base_spec":"/pa/units/commanders/base_commander/base_commander.json",
    "display_name":"PRoeleert",
    "description":"Combat Fabricator Commander",
-   "max_health":6000,
+   "max_health":7000,
    "attachable":{
       "offsets":{
          "root":[
@@ -17,7 +17,7 @@
          ]
       }
    },
-   "buildable_types":"(Basic & Factory) | (Basic & Defense) | Teleporter",
+   "buildable_types":"(Basic & Factory) | (Basic & Defense) | Teleporter | Wall",
    "can_only_assist_with_buildable_items":true,
    "command_caps":[
       "ORDER_Move",

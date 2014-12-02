@@ -1,6 +1,6 @@
 {
    "units":[
-   	"/pa/units/commanders/airship/airship.json",
+      "/pa/units/land/sentry/sentry.json",
       "/pa/units/air/air_factory/air_factory.json",
       "/pa/units/air/air_factory_adv/air_factory_adv.json",
       "/pa/units/air/air_scout/air_scout.json",

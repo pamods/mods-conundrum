@@ -1,6 +1,7 @@
 {
   "armor_damage_map": {
-	"AT_Structure": 0.4
+	"AT_Structure": 0.4,
+	"AT_Commander": 0
   },
   "ammo_type": "Projectile",
   "audio_loop": "/SE/Weapons/commander/Commander_uber_cannon_fire",

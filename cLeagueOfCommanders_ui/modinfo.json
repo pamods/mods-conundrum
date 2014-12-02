@@ -4,9 +4,9 @@
     "display_name": "League Of Commanders - UI",
     "description": "Client mod to be used by everyone playing League of Commanders",
     "author": "Captain Conundrum",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "build": "75539",
-    "date": "2014/11/30",
+    "date": "2014/12/01",
     "signature": "not yet implemented",
     "category": [
         "in-game",

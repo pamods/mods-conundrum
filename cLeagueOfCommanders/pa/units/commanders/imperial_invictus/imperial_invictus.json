@@ -17,6 +17,38 @@
 		"energy":30000,
 		"metal":1500
    },
+   "tools":[
+		{
+			"spec_id":"/pa/tools/commander_build_arm/commander_build_arm.json",
+			"aim_bone":"bone_turret"
+		},
+		{
+			"spec_id":"/pa/units/commanders/imperial_invictus/base_commander_tool_bullet_weapon.json",
+			"aim_bone":"bone_turret",
+			"muzzle_bone":"socket_rightMuzzle",
+			"primary_weapon":true
+		},
+		{
+			"spec_id":"/pa/tools/uber_cannon/uber_cannon.json",
+			"aim_bone":"bone_turret",
+			"muzzle_bone":"socket_rightMuzzle",
+			"secondary_weapon":true
+		},
+		{
+			"spec_id":"/pa/units/commanders/base_commander/base_commander_tool_aa_weapon.json",
+			"aim_bone":"bone_turret",
+			"muzzle_bone":"socket_rightMuzzle",
+			"primary_weapon":false,
+			"show_range":false
+		},
+		{
+			"spec_id":"/pa/units/commanders/base_commander/base_commander_tool_torpedo_weapon.json",
+			"aim_bone":"bone_turret",
+			"muzzle_bone":"socket_rightMuzzle",
+			"primary_weapon":false,
+			"show_range":false
+		}
+   ],
 
    "attachable":{
       "offsets":{

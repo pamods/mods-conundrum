@@ -3,7 +3,7 @@
    "display_name":"Marshall",
    "description":"Intel Commander",
 
-   "max_health":7500,
+   "max_health":9000,
    "buildable_types":"CmdBuild | (Recon & Basic) | (Recon & Structure)",
 	"recon":{
 		"observer":{
