@@ -1,0 +1,25 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cMaps_gandalf",
+    "display_name": "Gandalf's Map Pack",
+    "description": "A collection of hand-made maps by Gandalf.",
+    "author": "[RLM]Gandalf",
+    "version": "1.0",
+    "build": "75539",
+    "date": "2014/12/03",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/gandalfs-custom-maps-released-canyon-wars-v1-3-updated-team-arena.66207",
+    "category": [
+        "ui"
+    ],
+    "load_planet": [
+        "coui://ui/mods/cMaps_gandalf/maplist.js"
+    ],
+    "id": "cMaps_gandalf",
+    "icon": "http://i.imgur.com/4oiyIbU.png",
+    "priority": 500,
+    "enabled": true,
+    "dependencies": [
+        "com.pa.conundrum.cShareSystems"
+    ]
+}
