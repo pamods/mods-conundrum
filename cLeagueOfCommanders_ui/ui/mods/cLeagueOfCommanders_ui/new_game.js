@@ -26,8 +26,8 @@ cLeagueOfCommanders.notInLeague = [
 	"ProgenitorCommander",
 	"DeltaCommander",
 	"RaptorBeast",
-	"QuadShadowdaemon",
 	"QuadSacrificialLamb",
+	"QuadShadowdaemon",
 	"QuadXinthar",
 	"ImperialAble",
 	"ImperialGnugfur",
@@ -43,6 +43,49 @@ cLeagueOfCommanders.notInLeague = [
 	"TankBanditks"
 ];
 
+cLeagueOfCommanders.commanderDescriptions = {
+	"Bsport": {
+		"subtitle": "Airship Commander",
+		"description": "Slow flying fortress equipped with an eXodus Beam that can destroy most structures in a single shot from directly above. The weapon can also be used against ground forces."
+	},
+	"Conundrum": {
+		"subtitle": "Orbital Commander",
+		"description": "This commander lives in the orbital layer and carries a Yamato Cannon. The weapon has a very long cooldown timer but destroys a very large area on the ground every time it fires."
+	},
+	"Martenus": {
+		"subtitle": "Ninja Commander",
+		"description": "Martenus has radar stealth, super fast torpedoes, and is capable of constructing advanced bots. Martenus loves the water but is still very powerful on land."
+	},
+	"Marshall": {
+		"subtitle": "Intel Commander",
+		"description": "Marshall is your team's chance to become aware of every threat before it is too late. Marshall has low health and is not effective in combat, but it has many intel options including the ability to construct radar satellites."
+	},
+	"PRoeleert": {
+		"subtitle": "Combat Fabrication Commander",
+		"description": "This is one of the hardest commanders to play. The PRoeleert sacrifices health and the ability to construct resource structures for mobility and a fast build rate that uses no energy. PRoeleert is an excellent support commander and can quickly repair friendly commanders or reclaim enemies."
+	},
+	"Quitch": {
+		"subtitle": "Flak Commander",
+		"description": "Quitch has high health and a flak weapon that is excellent against large swarms of air or even orbital units. Although useful in many situations, Quitch is best paired with a commander that is easily sniped by air."
+	},
+	"Sambasti": {
+		"subtitle": "Transport Commander",
+		"description": "Although not the best commander for duels, Sambasti can carry up to 6 units. This commander has a fast anti-air weapon but is still very vulnerable to fighters, to be sure to send air support. Always remember that Sambasti can even carry other commanders!"
+	},
+	"TotalAnnihilation": {
+		"subtitle": "Orbital Fabrication Commander",
+		"description": "Conundrum's worst nightmare in single-planet systems. Total Annihilation can build orbital transports and fighters without an orbital launcher, so use this commander to quickly pin down an enemy Conundrum or expand throughout a multi-planet system."
+	},
+	"Tripax": {
+		"subtitle": "Defense Commander",
+		"description": "Although slow, Tripax has the highest health of all the commanders. Tripax has a slightly longer range weapon and can build all kinds of defenses."
+	},
+	"ZaphodX": {
+		"subtitle": "Combat Commander",
+		"description": "ZaphodX is an expert at commander duels and is able to take on an entire army on its own with an improved Uber Cannon. Many of the other commanders work well in combination with ZaphodX."
+	}
+};
+
 cLeagueOfCommanders.lastArmy = 0;
 cLeagueOfCommanders.lastSlots = Array(model.armies().length);
 cLeagueOfCommanders.pickCountInArmy = 1;
@@ -52,6 +95,7 @@ cLeagueOfCommanders.isMyTurn = false;
 cLeagueOfCommanders.announcedMod = false;
 cLeagueOfCommanders.usingServerMod = ko.observable(false);
 cLeagueOfCommanders.addedPicksButton = false;
+cLeagueOfCommanders.showCommanderCard = ko.observable(false);
 
 cLeagueOfCommanders.renamecommander = function(commanders, objectName, newName) {
 	var foundDuplicate = false;
@@ -345,6 +389,66 @@ model.isGameCreator.subscribe(function(newValue) {
 		cLeagueOfCommanders.addPicksButton();
 });
 
+cLeagueOfCommanders.watchCommanderPicker = function() {
+	// select the target node
+	var target = document.querySelector('.slot-player');
+
+	// create an observer instance
+	var observer = new MutationObserver(function(mutations) {
+	  mutations.forEach(function(mutation) {
+
+		$(".div-commander-picker-item").unbind();
+		$(".div-commander-picker-item").on("mouseenter", function() {
+			cLeagueOfCommanders.commanderImg_mouseenter(this);
+		});
+
+		$(".div-commander-picker-item").on("mouseleave", function() {
+			cLeagueOfCommanders.commanderImg_mouseleave(this);
+		});
+
+	  });
+	});
+
+	// configuration of the observer:
+	var config = { childList: true };
+
+	// pass in the target node, as well as the observer options
+	observer.observe(target, config);
+};
+
+cLeagueOfCommanders.commanderImg_mouseenter = function(element) {
+	console.log($(element).offset());
+	var commanderName = $(element).find(".profile-commander-name").text();
+	console.log(commanderName);
+	cLeagueOfCommanders.setCommanderCard(element, commanderName);
+	cLeagueOfCommanders.showCommanderCard(true);
+};
+
+cLeagueOfCommanders.commanderImg_mouseleave = function(element) {
+	cLeagueOfCommanders.showCommanderCard(false);
+};
+
+cLeagueOfCommanders.setCommanderCard = function(element, commanderName) {
+	console.log($(element).offset());
+	var offset = $(element).offset();
+	offset.top += $(element).height() + 4;
+	offset.left += 0;
+	$("#commander-card").css("top", offset.top);
+	$("#commander-card").css("left", offset.left);
+	$("#commander-card-subtitle").text(cLeagueOfCommanders.commanderDescriptions[commanderName].subtitle);
+	$("#commander-card-description").text(cLeagueOfCommanders.commanderDescriptions[commanderName].description);
+};
+
+//load html dynamically
+cLeagueOfCommanders.loadHtmlTemplate = function(element, url) {
+    element.load(url, function () {
+        console.log("Loading html " + url);
+        element.children().each(function() {
+			ko.applyBindings(model, this);
+		});
+    });
+};
+
 (function() {
 	model.activeModTextArray.subscribe(function(newValue) {
 		for(var i=0; i<newValue.length; i++) {
@@ -374,7 +478,15 @@ model.isGameCreator.subscribe(function(newValue) {
 							}
 					 }
 				});
+
+				$("td.players").on("change", function() {
+					cLeagueOfCommanders.watchCommanderPicker();
+				});
+
+				$("body").append("<div id='commander-card-cont'></div>");
+				cLeagueOfCommanders.loadHtmlTemplate($("#commander-card-cont"), "coui://ui/mods/cLeagueOfCommanders_ui/new_game/commander_card.html");
 			}
 		}
 	});
 })();
+
