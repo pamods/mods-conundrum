@@ -130,6 +130,7 @@ cLeagueOfCommanders.removeCommander = function(commanders, objectName) {
 
 var setCommander_original = model.setCommander;
 model.setCommander = function(commanderIndex) {
+	cLeagueOfCommanders.showCommanderCard(false);
 	if(!cLeagueOfCommanders.usingServerMod() || !cLeagueOfCommanders.doingPicks)
 		return setCommander_original(commanderIndex);
 	return model.chooseCommander(commanderIndex);
@@ -141,7 +142,6 @@ model.chooseCommander = function (commanderIndex) {
 		 return;
 
 	if(cLeagueOfCommanders.canSelectCommander(commanderIndex)) {
-
 		model.selectedCommanderIndex(commanderIndex % model.commanders().length);
 
 		model.send_message('update_commander', {
@@ -390,36 +390,32 @@ model.isGameCreator.subscribe(function(newValue) {
 });
 
 cLeagueOfCommanders.watchCommanderPicker = function() {
-	// select the target node
-	var target = document.querySelector('.slot-player');
-
-	// create an observer instance
-	var observer = new MutationObserver(function(mutations) {
-	  mutations.forEach(function(mutation) {
-
-		$(".div-commander-picker-item").unbind();
-		$(".div-commander-picker-item").on("mouseenter", function() {
-			cLeagueOfCommanders.commanderImg_mouseenter(this);
-		});
-
-		$(".div-commander-picker-item").on("mouseleave", function() {
-			cLeagueOfCommanders.commanderImg_mouseleave(this);
-		});
-
-	  });
+	//$(".div-commander-picker-item").unbind("mouseenter");
+	//$(".div-commander-picker-item").unbind("mouseleave");
+	$(".div-commander-picker-item").on("mouseenter", function() {
+		cLeagueOfCommanders.commanderImg_mouseenter(this);
 	});
 
-	// configuration of the observer:
-	var config = { childList: true };
+	$(".div-commander-picker-item").on("mouseleave", function() {
+		cLeagueOfCommanders.commanderImg_mouseleave(this);
+	});
+};
 
-	// pass in the target node, as well as the observer options
-	observer.observe(target, config);
+cLeagueOfCommanders.pickerTimer;
+
+cLeagueOfCommanders.pickerTimerFunction = function(tries) {
+	if($(".div-commander-picker-cont").length > 0) {
+		console.log(Date.now());
+
+		cLeagueOfCommanders.watchCommanderPicker();
+	} else {
+		tries--;
+		cLeagueOfCommanders.pickerTimer = setTimeout("cLeagueOfCommanders.pickerTimerFunction(" + tries + ");", 100);
+	}
 };
 
 cLeagueOfCommanders.commanderImg_mouseenter = function(element) {
-	console.log($(element).offset());
 	var commanderName = $(element).find(".profile-commander-name").text();
-	console.log(commanderName);
 	cLeagueOfCommanders.setCommanderCard(element, commanderName);
 	cLeagueOfCommanders.showCommanderCard(true);
 };
@@ -429,7 +425,6 @@ cLeagueOfCommanders.commanderImg_mouseleave = function(element) {
 };
 
 cLeagueOfCommanders.setCommanderCard = function(element, commanderName) {
-	console.log($(element).offset());
 	var offset = $(element).offset();
 	offset.top += $(element).height() + 4;
 	offset.left += 0;
@@ -479,8 +474,10 @@ cLeagueOfCommanders.loadHtmlTemplate = function(element, url) {
 					 }
 				});
 
-				$("td.players").on("change", function() {
-					cLeagueOfCommanders.watchCommanderPicker();
+				model.showCommanderPicker.subscribe(function(newValue) {
+					if(newValue) {
+						cLeagueOfCommanders.pickerTimerFunction(10);
+					}
 				});
 
 				$("body").append("<div id='commander-card-cont'></div>");
