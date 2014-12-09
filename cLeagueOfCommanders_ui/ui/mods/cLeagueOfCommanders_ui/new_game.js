@@ -19,28 +19,28 @@ cLeagueOfCommanders.commanderLeague = {
 	"RaptorStickman9000":	"PRoeleert",
 	"GammaCommander":			"Sambasti",
 	"ImperialAryst0krat":	"Sambasti",
-	"QuadGambitdfa":			"Sambasti"
+	"QuadGambitdfa":			"Sambasti",
+	"ProgenitorCommander":	"OtterFamily",
+	"QuadShadowdaemon":		"OtterFamily",
+	"RaptorDiremachine":		"OtterFamily"
 };
 
 cLeagueOfCommanders.notInLeague = [
-	"ProgenitorCommander",
 	"DeltaCommander",
+	"QuadXinthar",
+	"ImperialGnugfur",
+	"QuadTokamaktech",
+	"TankBanditks",
 	"RaptorBeast",
 	"QuadSacrificialLamb",
-	"QuadShadowdaemon",
-	"QuadXinthar",
 	"ImperialAble",
-	"ImperialGnugfur",
 	"RaptorIwmiked",
 	"ImperialSangudo",
 	"QuadPotbelly79",
 	"ImperialTheChessKnight",
 	"RaptorZaazzaa",
-	"QuadTokamaktech",
-	"RaptorDiremachine",
 	"RaptorBeniesk",
-	"ImperialKapowaz",
-	"TankBanditks"
+	"ImperialKapowaz"
 ];
 
 cLeagueOfCommanders.commanderDescriptions = {
@@ -59,6 +59,10 @@ cLeagueOfCommanders.commanderDescriptions = {
 	"Marshall": {
 		"subtitle": "Intel Commander",
 		"description": "Marshall is your team's chance to become aware of every threat before it is too late. Marshall has low health and is not effective in combat, but it has many intel options including the ability to construct radar satellites."
+	},
+	"OtterFamily": {
+		"subtitle": "Artillery Commander",
+		"description": "Has an artillery weapon that normally fires slowly but can store up ammunition for a rapid-fire volley of up to 10 shots. OtterFamily's cannon is inaccurate but can do severe damage to large armies in the mid to late game."
 	},
 	"PRoeleert": {
 		"subtitle": "Combat Fabrication Commander",
@@ -98,7 +102,7 @@ cLeagueOfCommanders.addedPicksButton = false;
 cLeagueOfCommanders.showCommanderCard = ko.observable(false);
 
 cLeagueOfCommanders.renamecommander = function(commanders, objectName, newName) {
-	var foundDuplicate = false;
+	var foundDuplicate = -1;
 
 	for(commanderIndex in commanders) {
 		var commander = commanders[commanderIndex];
@@ -106,13 +110,16 @@ cLeagueOfCommanders.renamecommander = function(commanders, objectName, newName) 
 		if(commander.ObjectName == objectName) {
 			commander.DisplayName = newName;
 
-			if(foundDuplicate) {
+			if(foundDuplicate >= 0) {
+				if(model.signedInToUbernet() && (commander.IsOwned || commander.IsFree)) {
+					commanders[foundDuplicate] = commanders[commanderIndex];
+				}
 				commanders.splice(commanderIndex, 1);
 			}
 		}
 
 		if(commander.DisplayName == newName) {
-			foundDuplicate = true;
+				foundDuplicate = commanderIndex;
 		}
 	}
 };
@@ -155,6 +162,14 @@ model.chooseCommander = function (commanderIndex) {
 cLeagueOfCommanders.canSelectCommander = function(commanderIndex) {
 	// If there is no server mod
 	if(!cLeagueOfCommanders.usingServerMod())
+		return true;
+
+	//Can't choose this commander
+	if(model.signedInToUbernet() && !(model.commanders()[commanderIndex].IsOwned || model.commanders()[commanderIndex].IsFree))
+		return false;
+
+	// If we are in free picks mode
+	if(cLeagueOfCommanders.doingPicks == false)
 		return true;
 
 	// ALLOW MULTIPLE PEOPLE TO PICK A COMM
@@ -392,6 +407,16 @@ model.isGameCreator.subscribe(function(newValue) {
 cLeagueOfCommanders.watchCommanderPicker = function() {
 	//$(".div-commander-picker-item").unbind("mouseenter");
 	//$(".div-commander-picker-item").unbind("mouseleave");
+
+	var commanderIndex = 0;
+	$(".div-commander-picker-item").each(function() {
+		if(!cLeagueOfCommanders.canSelectCommander(commanderIndex)) {
+			$(this).addClass("div-commander-picker-item-disabled");
+		}
+
+		commanderIndex++;
+	});
+
 	$(".div-commander-picker-item").on("mouseenter", function() {
 		cLeagueOfCommanders.commanderImg_mouseenter(this);
 	});
@@ -405,7 +430,6 @@ cLeagueOfCommanders.pickerTimer;
 
 cLeagueOfCommanders.pickerTimerFunction = function(tries) {
 	if($(".div-commander-picker-cont").length > 0) {
-		console.log(Date.now());
 
 		cLeagueOfCommanders.watchCommanderPicker();
 	} else {
@@ -450,7 +474,12 @@ cLeagueOfCommanders.loadHtmlTemplate = function(element, url) {
 			if(newValue[i] == "League Of Commanders" && !cLeagueOfCommanders.announcedMod) {
 				cLeagueOfCommanders.usingServerMod(true);
 
-				var commanderList = model.commanders();
+
+				var commanderList =  _.filter(model.extendedCatalog(), function (element) {
+					  return element.UnitSpec;
+				 });
+
+				//var commanderList = model.commanders();
 
 				for(commanderObject in cLeagueOfCommanders.commanderLeague) {
 					var commanderName = cLeagueOfCommanders.commanderLeague[commanderObject];

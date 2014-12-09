@@ -30,3 +30,7 @@
 	line-height: 17px;
 	color: rgba(223, 223, 223, .6);
 }
+
+.div-commander-picker-item-disabled {
+	-webkit-filter: brightness(0.7) contrast(0.8) grayscale(1);
+}

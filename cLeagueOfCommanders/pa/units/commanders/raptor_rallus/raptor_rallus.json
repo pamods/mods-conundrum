@@ -31,11 +31,25 @@
                "channel":"radar",
                "shape":"capsule",
                "radius":600
-            }
+            },
+				{
+					"layer":"celestial",
+					"channel":"radar",
+					"shape":"sphere",
+					"radius":1,
+					"uses_energy":false
+            },
 			]
 		}
 	},
-
+	"navigation":{
+      "type":"amphibious",
+      "acceleration":90,
+      "brake":90,
+      "move_speed":9,
+      "turn_speed":90,
+      "turn_in_place":false
+   },
 
    "attachable":{
       "offsets":{
