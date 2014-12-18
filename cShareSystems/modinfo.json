@@ -1,0 +1,33 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cShareSystems",
+    "display_name": "System Sharing",
+    "description": "Share your favorite systems with other users. eXodus eSports, and clan maps are available as well.",
+    "author": "Captain Conundrum",
+    "version": "1.6.6",
+    "build": "76456",
+    "date": "2014/12/18",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/rel-system-sharing.56319/",
+    "category": [
+        "ui"
+    ],
+    "new_game": [
+            "coui://ui/mods/cShareSystems/new_game.js"
+    ],
+    "load_planet": [
+        "coui://ui/mods/cShareSystems/cShareSystems.js",
+        "coui://ui/mods/cShareSystems/load_planet.js",
+        "coui://ui/mods/cShareSystems/cShareSystems.css"
+    ],
+    "system_editor": [
+        "coui://ui/mods/cShareSystems/cShareSystems.js",
+        "coui://ui/mods/cShareSystems/system_editor.js",
+        "coui://ui/mods/cShareSystems/cShareSystems.css"
+    ],
+    "icon": "http://pamods.github.io/icons/cShareSystems.png",
+    "id": "cShareSystems",
+    "priority": 99,
+    "enabled": true,
+    "dependencies": []
+}

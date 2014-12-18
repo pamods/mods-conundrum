@@ -1,0 +1,33 @@
+<div class="left_action_buttons">
+	<!-- ko if: allowDeleteSystem -->
+	<div class="" data-bind="click: function () { },
+			css: { btn_std_disabled: true, btn_std: false }">
+		<div class="btn_label" style="padding:0px 40px;">
+			<loc data-i18n="load_planet:delete.message" desc="">Delete</loc>
+		</div>
+	</div>
+	<!-- /ko -->
+	<!-- ko if: allowExportSystem -->
+	<div class="" data-bind="click: $root.exportSystem,
+			css: { btn_std_disabled: !model.canExportSelected(), btn_std: canExportSelected }">
+		<div class="btn_label" style="padding:0px 40px;">
+			<loc data-i18n="load_planet:export.message" desc="">Export</loc>
+		</div>
+	</div>
+	<!-- /ko -->
+</div>
+
+<div id="cShareSystems-button-bar-inner">
+
+	<div class="paginate-container" style="height: 53px;">
+
+	</div>
+
+	<div id="cshareSystems-loadButton" class="" style="float: right;" data-bind="click: $root.loadSystem,
+		css: { btn_hero_disabled: model.selectedSystemIndex() === -1, btn_hero: model.selectedSystemIndex() !== -1 }">
+		<div class="btn_label" style="padding:0px 40px;">
+			<loc data-i18n="load_planet:load_system.message" desc="">Load System</loc>
+		</div>
+	</div>
+
+</div>

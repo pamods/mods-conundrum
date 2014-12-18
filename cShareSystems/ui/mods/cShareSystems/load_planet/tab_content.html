@@ -1,0 +1,29 @@
+<div data-bind="visible: model.showValue()=='cShareSystems'">
+
+	<h2 style="display: inline;">Shared Systems</h2>
+
+	<div id="cSystemSharing_serverselect" data-bind="visible: cShareSystems.showServerOptions">
+		<div>
+			<span class="input_label">Server</span>
+			<select class="div_settings_control_select"
+				data-bind="options: cShareSystems.serverOptions, optionsText: function(item) { return item.name; }, value: cShareSystems.server" />
+		</div>
+	</div>
+
+	<div id="system-list" data-bind="foreach: cShareSystems.systems">
+		<div class="one-system" data-bind="click: function () { model.selectedSystemIndex($index()); },
+							   css: { one_system_selected: model.selectedSystemIndex() == $index() }">
+			<div class="system-background" data-bind="style: { backgroundImage: $root.imageUrlForSystem($data) }" style="background-image: url(coui://ui/main/shared/img/desert.png);"></div>
+			<div class="system-properties">
+			<div class="system-title" data-bind="text: $data.name">Duelist System</div>
+			<div class="system-planet-grp">
+				<!-- ko foreach: $root.sortPlanets($data.planets) -->
+				<img class="planet_thumb" data-bind="attr: { src: $root.imageSourceForPlanet($data) }" src="coui://ui/main/shared/img/desert.png">
+				<!-- /ko -->
+			</div>
+			<div class="system-player-reco" data-bind="text: $data.creator"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
