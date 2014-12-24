@@ -18,6 +18,7 @@ cLeagueOfCommanders.commanderLeague = {
 	"ImperialChronoblip":	"PRoeleert",
 	"RaptorStickman9000":	"PRoeleert",
 	"GammaCommander":			"Sambasti",
+	"QuadAjax":					"Sambasti",
 	"ImperialAryst0krat":	"Sambasti",
 	"QuadGambitdfa":			"Sambasti",
 	"ProgenitorCommander":	"OtterFamily",
@@ -40,7 +41,10 @@ cLeagueOfCommanders.notInLeague = [
 	"ImperialTheChessKnight",
 	"RaptorZaazzaa",
 	"RaptorBeniesk",
-	"ImperialKapowaz"
+	"ImperialKapowaz",
+	"QuadRaventhornn",
+	"ImperialFiveleafclover",
+	"ImperialSeniorhelix"
 ];
 
 cLeagueOfCommanders.commanderDescriptions = {
@@ -74,7 +78,7 @@ cLeagueOfCommanders.commanderDescriptions = {
 	},
 	"Sambasti": {
 		"subtitle": "Transport Commander",
-		"description": "Although not the best commander for duels, Sambasti can carry up to 6 units. This commander has a fast anti-air weapon but is still very vulnerable to fighters, to be sure to send air support. Always remember that Sambasti can even carry other commanders!"
+		"description": "Although not the best commander for duels, Sambasti can carry up to 6 units. This commander has a fast anti-air weapon but is still very vulnerable to fighters, so be sure to send air support. Always remember that Sambasti can even carry other commanders!"
 	},
 	"TotalAnnihilation": {
 		"subtitle": "Orbital Fabrication Commander",

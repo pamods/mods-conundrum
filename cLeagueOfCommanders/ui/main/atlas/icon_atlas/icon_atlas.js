@@ -113,6 +113,7 @@ $(document).ready(function () {
             'control_point',
             'mining_platform',
             'metal_spot_preview',
+            'unit_cannon',
             'sentry'
         ]);
 
