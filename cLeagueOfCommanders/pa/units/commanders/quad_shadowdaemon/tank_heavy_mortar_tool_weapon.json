@@ -1,6 +1,11 @@
 {
    "base_spec":"/pa/tools/base_artillery_turret_unit/base_artillery_turret_unit.json",
-   "ammo_id":"/pa/units/commanders/quad_shadowdaemon/tank_heavy_mortar_ammo.json",
+   "ammo_id": [
+   	{
+			"layer":"WL_AnyLand",
+			"id":"/pa/units/commanders/quad_shadowdaemon/tank_heavy_mortar_ammo.json"
+		}
+   ],
 	"rate_of_fire": 3,
 	"ammo_source": "energy",
 	"ammo_capacity": 100,

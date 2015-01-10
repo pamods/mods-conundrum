@@ -1,0 +1,25 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cMaps_loc_arena",
+    "display_name": "LoC: The Arena - Tournament Map Pack",
+    "description": "Map pack for LoC: The Arena, a tournament by eXodus eSports.",
+    "author": "eXodus eSports",
+    "version": "1.0",
+    "build": "76557",
+    "date": "2015/01/10",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/exodus-esports-presents-loc-the-arena-tournament.66716/",
+    "category": [
+        "ui"
+    ],
+    "load_planet": [
+        "coui://ui/mods/cMaps_loc_arena/maplist.js"
+    ],
+    "id": "cMaps_loc_arena",
+    "icon": "http://i.imgur.com/ioZlyQA.png",
+    "priority": 500,
+    "enabled": true,
+    "dependencies": [
+        "com.pa.conundrum.cShareSystems"
+    ]
+}
