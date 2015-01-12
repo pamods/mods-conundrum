@@ -11,6 +11,11 @@
 			$(this).removeClass("cExodus_alert");
 		});
 
+		$("#cExodus_articles_tab").on("click", function() {
+			localStorage.cExodus_lastArticle = cExodus.articles()[0].ID;
+			$(this).removeClass("cExodus_alert");
+		});
+
 		$("#cExodus_guides_tab").on("click", function() {
 			localStorage.cExodus_lastGuide = cExodus.guides()[0].ID;
 			$(this).removeClass("cExodus_alert");

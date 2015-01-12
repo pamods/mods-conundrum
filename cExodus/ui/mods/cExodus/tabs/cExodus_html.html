@@ -25,9 +25,15 @@
 				</h4>
 			</li>
 
-			<li id="cExodus_top10" class="tab-container-box">
+			<!--<li id="cExodus_top10" class="tab-container-box">
 				<h4  class="exp-heading-tab">
 					<span id="cExodus_top10_tab" class="tab">Top 10</span>
+				</h4>
+			</li>-->
+
+			<li id="cExodus_articles" class="tab-container-box">
+				<h4 class="exp-heading-tab">
+					<span id="cExodus_articles_tab" class="tab">Articles</span>
 				</h4>
 			</li>
 
@@ -54,6 +60,8 @@
 						</tr>
 					</tbody>
 				</table>
+
+				<a href="http://exodusesports.com/tournament"><div class="cExodus_rowButton">More Events</div></a>
 			</div>
 
 			<!-- NEWS -->
@@ -69,15 +77,40 @@
 						</tr>
 					</tbody>
 				</table>
+
+				<a href="http://exodusesports.com/news"><div class="cExodus_rowButton">More News</div></a>
 			</div>
 
 			<!-- TOP10 -->
-			<div id="cExodus_top10" class="container-box">
+			<!--<div id="cExodus_top10" class="container-box">
 				<ul data-bind="foreach: cExodus.top10">
 					<li>
 						<span data-bind="html: '<div>' + ($index()+1) + '</div>' + ' <a style=\'margin-left: 10px;\' href=\'http://exodusesports.com/?pastats_player_id=' + id + '\'>' + name + '</a>'"></span>
 					</li>
 				</ul>
+			</div>-->
+
+			<!-- ARTICLES -->
+			<div id="cExodus_articles" class="container-box">
+				<table>
+					<tbody data-bind="foreach: cExodus.articles">
+						<tr>
+							<td>
+								<div class="card-holder">
+									<div class="card_">
+										<div class="card-back">
+											<a data-bind="attr: { href: link }"><img class="cExodus_guide_img" data-bind="attr: { src: featured_image }"/></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="cExodus_whiteLink cExodus_smallText cExodus_guideDescription_" data-bind="html: '<a href=\'' + link + '\'>' + excerpt + '</a>'"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<a href="http://exodusesports.com/article"><div class="cExodus_rowButton">More Articles</div></a>
 			</div>
 
 			<!-- GUIDES -->
@@ -91,31 +124,6 @@
 										<div class="card-back">
 											<a data-bind="attr: { href: link }"><img class="cExodus_guide_img" data-bind="attr: { src: featured_image }"/></a>
 										</div>
-										<!--<div class="card-front">
-											<section class="author">
-												<div class="inner-container">
-
-													<h4 class="author-box-title">About the author</h4>
-
-													<div class="author-avatar">
-														<img data-bind="attr: { src: author.avatar }" width="145" height="145" class="avatar avatar-145 wp-user-avatar wp-user-avatar-145 alignnone photo">
-													</div>
-
-													<div class="author-details">
-
-														<h4 class="author-name" data-bind="text: author.name"></h4>
-
-														<span data-bind="text: author.description"></span>
-
-														<div class="socialbuttons small">
-															<a class="sbtwitch" href="http://www.twitch.tv/mrelodea" target="_blank"></a>
-															<a class="sbyoutube" href="https://www.youtube.com/channel/UClm5ZutwCA3OoMiDDCgMA7Q" target="_blank"></a>
-														</div>
-
-													</div>
-												</div>
-											</section>
-										</div>-->
 									</div>
 								</div>
 

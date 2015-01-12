@@ -6,12 +6,14 @@ var cExodus = (function () {
 	urls.exodus_eventSchedule = "http://exodusesports.com/api-2/posts/?type=tournament&filter[posts_per_page]=5&filter[orderby]=tournament_date";
 	urls.exodus_newsItems = "http://exodusesports.com/api-2/posts/?type=news&filter[posts_per_page]=3";
 	urls.pyrus_top10 = "http://pa.coffee-break.at/api/ladder?limit=10";
-	urls.exodus_guides = "http://exodusesports.com/api-2/posts/?type=guides&filter[posts_per_page]=3";
+	urls.exodus_articles = "http://exodusesports.com/api-2/posts/?type=article&filter[posts_per_page]=2";
+	urls.exodus_guides = "http://exodusesports.com/api-2/posts/?type=guides&filter[posts_per_page]=2";
 	urls.exodus_isLive = "http://exodusesports.com/site-status";
 
 	cExodus.newsItems = ko.observable(new Array());
 	cExodus.eventSchedule = ko.observable(new Array());
 	cExodus.top10 = ko.observable(new Array());
+	cExodus.articles = ko.observable(new Array());
 	cExodus.guides = ko.observable(new Array());
 	cExodus.isLive = ko.observable(false);
 	cExodus.isLiveResponse = ko.observable(false);
@@ -101,6 +103,25 @@ var cExodus = (function () {
 		});
 	};
 
+	cExodus.loadArticles = function() {
+		$.get(urls.exodus_articles, { time: Date.now() }, function(data) {
+			cExodus.articles(data);
+			cExodus.setArticleAlert();
+
+			$(".card-holder").on("mouseenter", function() {
+				$(this).parent().find(".cExodus_guideDescription").stop().animate({
+					opacity: 0
+				}, 500);
+			});
+
+			$(".card-holder").on("mouseleave", function() {
+				$(this).parent().find(".cExodus_guideDescription").stop().animate({
+					opacity: 1
+				}, 500);
+			});
+		});
+	};
+
 	cExodus.loadGuides = function() {
 		$.get(urls.exodus_guides, { time: Date.now() }, function(data) {
 			cExodus.guides(data);
@@ -146,6 +167,10 @@ var cExodus = (function () {
 			return "[]";
 	}
 
+	cExodus.getLastArticle = function() {
+		return localStorage.cExodus_lastArticle;
+	}
+
 	cExodus.getLastGuide = function() {
 		return localStorage.cExodus_lastGuide;
 	}
@@ -161,6 +186,13 @@ var cExodus = (function () {
 		var lastEvent = cExodus.getLastEvent();
 		if(!cExodus.getEventIds().equals(JSON.parse(lastEvent))) {
 			$("#cExodus_events_tab").addClass("cExodus_alert");
+		}
+	};
+
+	cExodus.setArticleAlert = function() {
+		var lastArticle = cExodus.getLastArticle();
+		if(cExodus.articles()[0].ID != lastArticle) {
+			$("#cExodus_articles_tab").addClass("cExodus_alert");
 		}
 	};
 
@@ -183,7 +215,7 @@ var cExodus = (function () {
 		return (
 			cExodus.newsItems().length>0
 			&& cExodus.eventSchedule().length>0
-			&& cExodus.top10().length>0
+			&& cExodus.articles().length>0
 			&& cExodus.guides().length>0
 			&& cExodus.isLiveResponse() == true);
 	};
@@ -192,7 +224,7 @@ var cExodus = (function () {
 		cExodus.loadIsLive();
 		cExodus.loadEventSchedule();
 		cExodus.loadNewsItems();
-		cExodus.loadTop10();
+		cExodus.loadArticles();
 		cExodus.loadGuides();
 	};
 

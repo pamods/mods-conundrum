@@ -121,8 +121,8 @@
 	background: #ffce14;
 
 	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: auto;
+	padding-right: auto;
 	padding-top: 10px;
 	
 	border-top: 2px solid #ffce14;
