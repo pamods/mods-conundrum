@@ -1,5 +1,8 @@
 (function() {
 
+	cExodus.openUrl = function(href) {
+            engine.call('web.launchPage', href);
+        }
 	cExodus.addListeners(function() {
 		$("#cExodus_news_tab").on("click", function() {
 			localStorage.cExodus_lastNews = cExodus.newsItems()[0].ID;
@@ -38,7 +41,7 @@
 			$("#cExodus").find("a").unbind("click");
 			$("#cExodus").find("a").on("click", function(e) {
 				var linkTarget = e.delegateTarget.href;
-				inGameBrowserEngineClient.call("addSession", { "sessionTitle": "eXodus eSports", "sessionUrl": linkTarget });
+				cExodus.openUrl(linkTarget);
 				return false;
 			});
 		});
