@@ -33,8 +33,5 @@
     "id": "cExodus",
     "icon": "http://i.imgur.com/oWmip9n.png",
     "priority": 100,
-    "enabled": true,
-    "dependencies": [
-        "com.pa.someonewhoisnobody.inGameBrowser"
-    ]
+    "enabled": true
 }
