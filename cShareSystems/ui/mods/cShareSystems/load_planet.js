@@ -158,25 +158,39 @@ cShareSystems.addTab = function(tabName, systems) {
 	});
 }
 
-cShareSystems.load_pas = function(tabName, fileArray) {
-	loadJson_pending(loadJson_pending() + 1);
+cShareSystems.load_pas = function(tabName, fileArray)
+{
+    loadJson_pending(loadJson_pending() + 1);
 
-	var systems = new Array();
-	var counter = fileArray.length;
+    var systems = new Array();
+    var counter = fileArray.length;
 
-	for(arrayItem in fileArray) {
-		var fileName = fileArray[arrayItem];
-		$.getJSON(fileName, function(data) {
-			systems.push(data);
-		}).always(function() {
-			counter--;
+    var system_index = 0;
+    var sort_index = {};
+    
+    for (arrayItem in fileArray)
+    {
+        var fileName = fileArray[arrayItem];
+        
+        sort_index[ fileName ] = system_index;
+        system_index++;
 
-			if(counter<=0) {
-				cShareSystems.addTab(tabName, systems);
-				loadJson_pending(loadJson_pending() - 1);
-			}
-		});
-	}
+        $.getJSON(fileName, function(data)
+        {
+            data.system_index = sort_index[ this.url ];
+            systems.push(data);
+        }).always(function()
+        {
+            counter--;
+
+            if (counter <= 0)
+            {
+                systems = _.sortBy(systems, 'system_index');
+                cShareSystems.addTab(tabName, systems);
+                loadJson_pending(loadJson_pending() - 1);
+            }
+        });
+    }
 };
 
 cShareSystems.unfixupPlanetConfig_array = function(systemsArray) {
