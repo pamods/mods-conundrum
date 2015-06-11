@@ -1,3 +1,5 @@
+/* load planet (should really split into different files) */
+
 .section_content .col_2 .tab-wrapper
 {
 /*     height: calc(100% - 80px) !important; */
@@ -70,91 +72,7 @@
     opacity: 1;
 }
 
-#cShareSystems_viewer .div_planet_list_cont {
-	border: none;
-	height: 352px;
-	padding-left: 0;
-	width: 687px;
-}
-
-#cShareSystems_viewer .cShareSystems_list_container {
-	background-color: #0E0E0E;
-	border: 1px solid #888;
-	width: 690px;
-	padding-left: 1px;
-}
-
-.not-error {
-	color: white;
-}
-
-#btn_show_cShareSystems_systems {
-	margin-left: 10px;
-}
-
-#filter-controls {
-	position: relative;
-	left: 324px;
-	top: -50px;
-	width: 200px;
-	height: 0;
-}
-
-#filter-controls-inner {
-	position: absolute;
-	width: 390px;
-	height: 70px;
-	padding-top: 5px;
-}
-
-#filter-controls-inner input[type="text"] {
-	width: 100px;
-	margin-left: 10px;
-}
-
-#filter-controls-inner input[type="number"] {
-	width: 40px;
-	text-align: center;
-	border:1px solid rgba(255,255,255,1);
-	background:black;
-	color:#fff;
-	text-shadow:none;
-	box-shadow:none;
-	padding:4px 0 4px 0;
-}
-
-#filter-controls-inner input[type="number"]:disabled {
-	border:1px solid rgba(255,255,255,.1);
-	background:black;
-	color:#666;
-	text-shadow:none;
-	box-shadow:none;
-}
-
-#filter-controls-inner select {
-	margin-left: 10px;
-	margin-top: 2px;
-	width: 99px;
-	height: 26px;
-}
-
-#filter-controls-inner td {
-	vertical-align: middle;
-}
-
-#filter-controls-inner div {
-	float: left;
-}
-
-#cSystemSharing_serverselect {
-	display: inline-block;
-}
-
-#cSystemSharing_serverselect div {
-	position: relative;
-	top: 0px;
-	/*margin-left: 60px;*/
-}
+/* system editor */
 
 .cSystemSharing_loading_div {
 	width: 40px;
@@ -189,7 +107,6 @@
 	display: inline-block;
 }
 
-
 #cSystemSharing_shareDiv .div_settings_control_select {
 	width: 100px;
 }
@@ -198,45 +115,4 @@
 	display: inline-block;
 	width: 100px;
 	margin-right: 5px;
-}
-
-/*
-#col-container {
-	width: 100%;
-	height: 100%;
-	display: block;
-}
-*/
-
-
-a:focus {
-    outline: 0;
-}
-
-#cShareSystems-description-cont {
-	margin-top: 20px;
-}
-
-#cShareSystems-description-name {
-	font-size: 16px;
-}
-
-#cShareSystems-description-creator {
-	font-size: 10px;
-	color: rgb(180,180,180);
-}
-
-#cShareSystems-description-version {
-	font-size: 10px;
-	color: rgb(180,180,180);
-}
-
-#cShareSystems-description-date {
-	font-size: 10px;
-	color: rgb(180,180,180);
-}
-
-#cShareSystems-description-desc {
-	font-size: 12px;
-	margin-top: 15px;
 }
