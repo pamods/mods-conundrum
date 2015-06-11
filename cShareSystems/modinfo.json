@@ -12,9 +12,6 @@
     "category": [
         "ui"
     ],
-    "new_game": [
-            "coui://ui/mods/cShareSystems/new_game.js"
-    ],
     "load_planet": [
         "coui://ui/mods/cShareSystems/cShareSystems.js",
         "coui://ui/mods/cShareSystems/load_planet.js",
