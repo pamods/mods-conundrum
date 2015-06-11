@@ -29,6 +29,11 @@
     margin: 0;
 }
 
+#cShareSystems-tabs li.selected a
+{
+    color: white;
+}
+
 #cShareSystems-tabs li a
 {
     padding: 5px;
