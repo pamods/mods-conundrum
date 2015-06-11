@@ -72,47 +72,7 @@
     opacity: 1;
 }
 
-/* system editor */
-
-.cSystemSharing_loading_div {
-	width: 40px;
-	height: 40px;
-	background: url(loading.gif);
-	display: none;
-}
-
-.cSystemSharing_loading_div_load_planet {
-	position: absolute;
-	top: 188px;
-	left: 325px;
-}
-
-.cSystemSharing_loading_div_system_editor {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-left: -20px;
-	margin-top: -20px;
-}
-
-#cShareSystems_viewer .div_planet_item_detail_cont {
-	height: 400px;
-}
-
-#cSystemSharing_shareDiv {
-	display: inline-block;
-}
-
-#cSystemSharing_shareButton {
-	display: inline-block;
-}
-
-#cSystemSharing_shareDiv .div_settings_control_select {
-	width: 100px;
-}
-
-#cSystemSharing_shareDiv #cSystemSharing_serverselect {
-	display: inline-block;
-	width: 100px;
-	margin-right: 5px;
+#cShareSystems_share_busy
+{
+    margin-left: 10px;
 }

@@ -21,7 +21,7 @@ var cShareSystems = (function () {
     model.cShareSystems_busy = ko.observable( false );
     
 	cShareSystems.addServer = function(server, noOverride) {
-		console.log("Adding server: " + server.name);
+
 		var serverOptions = cShareSystems.serverOptions();
 
 		// Override an existing server
@@ -39,7 +39,6 @@ var cShareSystems = (function () {
 	};
 
 	cShareSystems.removeServer = function(name) {
-		console.log("Removing server: " + name);
 		cShareSystems.serverOptions.remove(function(item) {
 			return item.name == name;
 		});
@@ -75,7 +74,7 @@ var cShareSystems = (function () {
 		{
 			"name"		: "Default Server",
 			"save_url"	: "http://1-dot-winged-will-482.appspot.com/save",
-			"search_url": "http://1-dot-winged-will-482.appspot.com/search"
+			"search_url"	: "http://1-dot-winged-will-482.appspot.com/search"
 		}
 	]);
 
@@ -131,7 +130,6 @@ var cShareSystems = (function () {
 	 */
 
 	 cShareSystems.getServerList = function() {
-		 console.log("Getting Server List");
 		 $.getJSON(cShareSystems.serverListUrl, function(data) {
 			if(!data || !data.servers)
 				return;
@@ -197,8 +195,10 @@ var cShareSystems = (function () {
 		newRequest = JSON.stringify(newRequest);
 		lastRequest = JSON.stringify(lastRequest);
 
+/*
 		console.log(cShareSystems.server().search_url);
 		console.log(JSON.stringify(page));
+*/
 
 		// Only send a request if there will be an update
 		if(forceUpdate || newRequest != lastRequest) {
