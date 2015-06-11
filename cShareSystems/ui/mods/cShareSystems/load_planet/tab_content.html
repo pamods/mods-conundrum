@@ -1,5 +1,5 @@
 <ul id='cShareSystems-tabs' data-bind='foreach: cShareSystems_tabs'>
-    <li>
+    <li data-bind="css: { selected: key == model.cShareSystems_selectedTabKey() }">
         <a data-bind='text: name, attr: { href: "#" + key}, click: model.cShareSystems_showTab'></a>
     </li>
 </ul>
