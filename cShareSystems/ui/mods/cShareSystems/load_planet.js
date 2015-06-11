@@ -93,7 +93,12 @@ model.cShareSystems_metal = function( data )
 
     if ( data.metal_spots )
     {
-        return "Custom Metal: " + data.metal_spots.length;
+        return data.metal_spots.length == 0 ? "No Metal" : "Custom Metal: " + data.metal_spots.length;
+    }
+    
+    if ( data.planet.metalClusters == 0 && data.planet.metalDensity == 0 )
+    {
+        return "No Metal";
     }
     
     return "Metal Clusters: " + Math.round( data.planet.metalClusters ) + " Density: "+ Math.round( data.planet.metalDensity );
@@ -105,7 +110,12 @@ model.cShareSystems_landing = function( data )
 
     if ( data.landing_zones )
     {
-        return "Custom Landing: " + ( $.isArray( data.landing_zones ) ? data.landing_zones.length : data.landing_zones.list.length );
+        var zones =  $.isArray( data.landing_zones ) ? data.landing_zones.length : data.landing_zones.list.length;
+        
+        if ( zones > 0 )
+        {
+            return "Custom Landing: " + zones;
+        }
     }
     
     return "";
@@ -115,7 +125,7 @@ model.cShareSystems_landing = function( data )
 model.cShareSystems_csg = function( data )
 {
     
-    if ( data.planetCSG )
+    if ( data.planetCSG && data.planetCSG.length > 0 )
     {
         return "Custom CSG: " + data.planetCSG.length;
     }
@@ -212,7 +222,7 @@ $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind
 
 $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_csg( $data )"></div>');
 
-// backwards compatibility
+// backwards compatibility for map packs
 
 cShareSystems.load_pas = function(tabName, fileArray)
 {
