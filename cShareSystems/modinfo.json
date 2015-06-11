@@ -6,7 +6,7 @@
     "author": "Captain Conundrum",
     "version": "2.0.0",
     "build": "82834",
-    "date": "2015/06/11",
+    "date": "2015/06/12",
     "signature": "not yet implemented",
     "forum": "https://forums.uberent.com/threads/rel-system-sharing.56319/",
     "category": [
@@ -15,11 +15,6 @@
     "load_planet": [
         "coui://ui/mods/cShareSystems/cShareSystems.js",
         "coui://ui/mods/cShareSystems/load_planet.js",
-        "coui://ui/mods/cShareSystems/cShareSystems.css"
-    ],
-    "system_editor": [
-        "coui://ui/mods/cShareSystems/cShareSystems.js",
-        "coui://ui/mods/cShareSystems/system_editor.js",
         "coui://ui/mods/cShareSystems/cShareSystems.css"
     ],
     "icon": "http://pamods.github.io/icons/cShareSystems.png",

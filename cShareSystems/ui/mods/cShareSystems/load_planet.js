@@ -2,6 +2,12 @@
 
 var loadJson_pending = ko.observable(0);
 
+// missing
+
+model.displayName = ko.observable('').extend({ session: 'displayName' });
+
+model.signed_in_to_ubernet = ko.observable(false).extend({ session: 'signed_in_to_ubernet' });
+
 // default is user systems
 
 model.cShareSystems_selectedTabKey = ko.observable( 'my-systems' );
@@ -55,6 +61,16 @@ model.cShareSystems_showingSharedSystems = ko.computed( function()
 {
     return cShareSystems.showServerOptions() && model.showValue() == 'systems' && model.cShareSystems_selectedTabKey() == 'shared-systems';
 })
+
+model.cShareSystems_allowSharedSystem = ko.computed( function()
+{
+   return model.allowExportSystem() && model.cShareSystems_showingUserSystems() && cShareSystems.saveServerOptions().length > 0 && model.signed_in_to_ubernet();
+});
+
+model.cShareSystems_canSharedSelected= ko.computed( function()
+{
+    return model.selectedSystemIndex() !== -1;    
+});
 
 model.cShareSystems_serverOptions = ko.computed( function()
 {
@@ -134,6 +150,31 @@ model.cShareSystems_csg = function( data )
 
 }
 
+model.cShareSystems_showShareServers = ko.computed( function()
+{
+    return cShareSystems.saveServerOptions().length > 1; 
+});
+
+model.cShareSystems_shareSystem = function()
+{
+
+    if ( ! model.selectedSystem() )
+        return;
+        
+    model.cShareSystems_busy( true );
+    
+    model.waitForSystemToLoad( model.selectedSystem(), { omit_keys: true }).then(function ( system )
+    {
+        
+        if ( model.debugExportFixedSystem )
+            system = UberUtility.fixupPlanetConfig(system);
+        
+        system.creator = model.displayName();
+        
+        cShareSystems.saveSystem( system );
+	});
+}
+
 cShareSystems.addTab = function(tabName, systems)
 {
 
@@ -157,7 +198,6 @@ cShareSystems.addTab = function(tabName, systems)
 
 cShareSystems.systems.subscribe( function( systems )
 {
-    console.log( systems );
     model.cShareSystems_tabsIndex()['shared-systems'].systems( systems ); 
 });
 
@@ -187,7 +227,7 @@ model.selectedSystemIsUserSystem = ko.computed( function()
     return model.cShareSystems_showingUserSystems();
 });
 
-model.deleteSystem = function ()
+model.deleteSystem = function()
 {
     if (model.selectedSystemIndex() < 0)
         return;
@@ -221,6 +261,8 @@ $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind
 $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_landing( $data )"></div>');
 
 $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_csg( $data )"></div>');
+
+$(".div_commit_secondary_options").append(loadHtml('coui://ui/mods/cShareSystems/load_planet/share.html'));
 
 // backwards compatibility for map packs
 

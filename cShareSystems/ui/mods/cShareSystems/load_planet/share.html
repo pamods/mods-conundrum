@@ -1,0 +1,8 @@
+<!-- ko if: cShareSystems_allowSharedSystem -->
+<button data-bind="click: cShareSystems_shareSystem, css: { disabled: !model.cShareSystems_canSharedSelected(), std: cShareSystems_canSharedSelected }">Share System</button>
+<!-- ko if: cShareSystems_showShareServers -->
+<span class="input_label">Server</span>
+<select class="div_settings_control_select" data-bind="options: cShareSystems.saveServerOptions, optionsText: 'name', value: cShareSystems.server" />
+<!-- /ko -->
+<img id="cShareSystems_share_busy" data-bind="visible: cShareSystems_busy" class="cShareSystems_busy" src="coui://ui/main/shared/img/loading.gif"/>
+<!-- /ko -->
