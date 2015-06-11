@@ -18,8 +18,10 @@ var cShareSystems = (function () {
 	 * There is a bug that is keeping me from getting the preferred server out of local storage.
 	 */
 
+    model.cShareSystems_busy = ko.observable( false );
+    
 	cShareSystems.addServer = function(server, noOverride) {
-		console.log("Adding server: " + server.name);
+
 		var serverOptions = cShareSystems.serverOptions();
 
 		// Override an existing server
@@ -37,7 +39,6 @@ var cShareSystems = (function () {
 	};
 
 	cShareSystems.removeServer = function(name) {
-		console.log("Removing server: " + name);
 		cShareSystems.serverOptions.remove(function(item) {
 			return item.name == name;
 		});
@@ -73,16 +74,16 @@ var cShareSystems = (function () {
 		{
 			"name"		: "Default Server",
 			"save_url"	: "http://1-dot-winged-will-482.appspot.com/save",
-			"search_url": "http://1-dot-winged-will-482.appspot.com/search"
+			"search_url"	: "http://1-dot-winged-will-482.appspot.com/search"
 		}
 	]);
 
 	cShareSystems.server = ko.observable(cShareSystems.getServer());
 	cShareSystems.server.subscribe(function(newServer) {
 		cShareSystems.setServer(newServer);
-		if(cShareSystems.currentPage()) {
+// 		if(!cShareSystems.currentPage()) {
 			cShareSystems.searchSystems({}, 0, true);
-		}
+// 		}
 	});
 
 	cShareSystems.systems = ko.observableArray([]);
@@ -129,7 +130,6 @@ var cShareSystems = (function () {
 	 */
 
 	 cShareSystems.getServerList = function() {
-		 console.log("Getting Server List");
 		 $.getJSON(cShareSystems.serverListUrl, function(data) {
 			if(!data || !data.servers)
 				return;
@@ -150,7 +150,7 @@ var cShareSystems = (function () {
 		system = JSON.stringify(system);
 
 		// Display the loading animation.
-		cShareSystems.displayLoadingAnimation();
+        model.cShareSystems_busy( true );
 
 		$.post(cShareSystems.server().save_url, { system: system }, function(data) {
 			if(data != "true")
@@ -158,11 +158,7 @@ var cShareSystems = (function () {
 			else
 				cShareSystems.showErrorDialog("Saved to " + cShareSystems.server().name + ". Cool!", false);
 
-			// Hide the loading animation
-			cShareSystems.hideLoadingAnimation();
 		}).fail(function(jqXHR, textStatus, errorThrown) {
-			// Hide the loading animation
-			cShareSystems.hideLoadingAnimation();
 
 			// Oh noes.
 			cShareSystems.lastError = {};
@@ -171,7 +167,10 @@ var cShareSystems = (function () {
 			cShareSystems.lastError.errorThrown = errorThrown;
 
 			cShareSystems.showErrorDialog("Error saving to server.<br/>" + cShareSystems.lastError.errorThrown, true);
-		});
+		}).always( function()
+		{
+			model.cShareSystems_busy( false );
+        });
 	};
 
 	// A little less easy
@@ -196,8 +195,10 @@ var cShareSystems = (function () {
 		newRequest = JSON.stringify(newRequest);
 		lastRequest = JSON.stringify(lastRequest);
 
+/*
 		console.log(cShareSystems.server().search_url);
 		console.log(JSON.stringify(page));
+*/
 
 		// Only send a request if there will be an update
 		if(forceUpdate || newRequest != lastRequest) {
@@ -205,7 +206,7 @@ var cShareSystems = (function () {
 			cShareSystems.currentPage(page);
 
 			// Display the loading animation.
-			cShareSystems.displayLoadingAnimation();
+            model.cShareSystems_busy( true );
 
 			$.get(cShareSystems.server().search_url, cShareSystems.currentPage() , function(data) {
 				// Ignore the response if it is for a previous request.
@@ -226,12 +227,8 @@ var cShareSystems = (function () {
 					}
 				}
 
-				// Hide the loading animation
-				cShareSystems.hideLoadingAnimation();
 			}, "json")
 				.fail(function(jqXHR, textStatus, errorThrown) {
-					// Hide the loading animation
-					cShareSystems.hideLoadingAnimation();
 
 					// Oh noes.
 					cShareSystems.lastError = {};
@@ -240,7 +237,10 @@ var cShareSystems = (function () {
 					cShareSystems.lastError.errorThrown = errorThrown;
 
 					cShareSystems.showErrorDialog("Error retrieving page from server.<br/>" + cShareSystems.lastError.errorThrown, true);
-				});
+				}).always( function()
+        		{
+        			model.cShareSystems_busy( false );
+                });
 		} else {
 			cShareSystems.systems(currentSystems);
 		}
@@ -326,16 +326,6 @@ var cShareSystems = (function () {
 				}
 			}
 		});
-	};
-
-	cShareSystems.displayLoadingAnimation = function() {
-		// If the page has a loading div, activate it
-		$("#cSystemSharing_loading_div").delay(500).fadeIn();
-	};
-
-	cShareSystems.hideLoadingAnimation = function() {
-		// If the page has a loading div, hide it
-		$("#cSystemSharing_loading_div").stop().hide();
 	};
 
 	return cShareSystems;
