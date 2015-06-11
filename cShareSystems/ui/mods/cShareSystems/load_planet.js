@@ -96,7 +96,7 @@ model.cShareSystems_metal = function( data )
         return data.metal_spots.length == 0 ? "No Metal" : "Custom Metal: " + data.metal_spots.length;
     }
     
-    if ( data.planet.metalClusters == 0 && data.planet.metalDensity == 0 )
+    if ( data.planet.metalDensity == 0 )
     {
         return "No Metal";
     }
