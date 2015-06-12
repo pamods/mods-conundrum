@@ -106,18 +106,23 @@ model.cShareSystems_systemVersion = function( data )
 
 model.cShareSystems_metal = function( data )
 {
-
+    
+    if ( data.planet.biome == 'gas')
+    {
+        return '';
+    }
+    
     if ( data.metal_spots )
     {
         return data.metal_spots.length == 0 ? "No Metal" : "Custom Metal: " + data.metal_spots.length;
     }
     
-    if ( data.planet.metalDensity == 0 )
+    if ( data.planet.metalClusters == 0 && data.planet.metalDensity == 0 )
     {
         return "No Metal";
     }
     
-    return "Metal Clusters: " + Math.round( data.planet.metalClusters ) + " Density: "+ Math.round( data.planet.metalDensity );
+    return "Metal Clusters: " + Math.round( data.planet.metalClusters ) + " Metal Density: "+ Math.round( data.planet.metalDensity );
 
 }
 
