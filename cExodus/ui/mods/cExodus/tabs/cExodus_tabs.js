@@ -1,8 +1,8 @@
 (function() {
 
 	cExodus.openUrl = function(href) {
-            engine.call('web.launchPage', href);
-        }
+		engine.call('web.launchPage', href);
+	}
 	cExodus.addListeners(function() {
 		$("#cExodus_news_tab").on("click", function() {
 			localStorage.cExodus_lastNews = cExodus.newsItems()[0].ID;
