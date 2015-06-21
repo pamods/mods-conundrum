@@ -25,13 +25,13 @@ model.cShareSystems_tabsIndex = ko.observable(
 	'shared-systems':
 	{
 		key: "shared-systems",
-		name: "Shared Systems",
+		name: "Shared",
 		systems: ko.observableArray( [] )
 	},
 	'uber-systems':
 	{
  		key: "uber-systems",
-		name: "Uber Systems",
+		name: "Uber",
 		systems: ko.observableArray( model.premadeSystems() ) // initially empty
 	}
 });
@@ -122,7 +122,29 @@ model.cShareSystems_metal = function( data )
         return "No Metal";
     }
     
-    return "Metal Clusters: " + Math.round( data.planet.metalClusters ) + " Metal Density: "+ Math.round( data.planet.metalDensity );
+    return "Metal Clusters: " + Math.round( data.planet.metalClusters );
+
+}
+
+model.cShareSystems_metal2 = function( data )
+{
+    
+    if ( data.planet.biome == 'gas')
+    {
+        return '';
+    }
+    
+    if ( data.metal_spots )
+    {
+        return '';
+    }
+    
+    if ( data.planet.metalClusters == 0 && data.planet.metalDensity == 0 )
+    {
+        return '';
+    }
+    
+    return "Metal Density: "+ Math.round( data.planet.metalDensity );
 
 }
 
@@ -262,6 +284,8 @@ $('<p data-bind="visible: $data.creator, text: model.cShareSystems_systemPlayers
 $("#detail-pane .planet-metal").remove();
 
 $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_metal( $data )"></div>');
+
+$("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_metal2( $data )"></div>');
 
 $("#detail-pane .planet-properties").append('<div class="planet-metal" data-bind="text: model.cShareSystems_landing( $data )"></div>');
 
