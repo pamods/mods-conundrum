@@ -4,11 +4,11 @@
     "display_name": "System Sharing",
     "description": "Share your favorite systems with other users. eXodus eSports, and clan maps are available as well.",
     "author": "Captain Conundrum, mikeyh",
-    "version": "2.0.1",
-    "build": "82834",
-    "date": "2015/06/13",
+    "version": "2.0.2",
+    "build": "83074",
+    "date": "2015/06/22",
     "signature": "not yet implemented",
-    "forum": "https://forums.uberent.com/threads/rel-system-sharing.56319/",
+    "forum": "https://forums.uberent.com/threads/rel-client-system-sharing-2.69117/",
     "category": [
         "ui"
     ],
