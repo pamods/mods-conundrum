@@ -1,16 +1,20 @@
 (function() {
-	//$('#sidebar-tabs').find(".active").removeClass("active");
-	//$(".tab-pane.active").removeClass("active");
-	//$('#sidebar-tabs').append('<li class="active"><a href="#cExodus_videofeed" data-toggle="pill" data-bind="click_sound: \'default\', rollover_sound: \'default\'">eXodus</a></li>');
-	//$('.tab-content').append("<div id='cExodus_videofeed' class='tab-pane active'><div id='cExodus_ytv-wrapper'></div></div>");
 
+	model.showExodusVideos = ko.pureComputed(function () {
+    	return model.communityTabGroup() == 'exodusvideos';
+    });
+	model.toggleExodusVideosTab = function(){
+		if(model.showExodusVideos()){
+			model.communityTabGroup(null);
+		}
+		else{
+			model.communityTabGroup('exodusvideos');
+		}
+	}
+	model.communityTabGroup('exodusvideos');
 
-	var ubertab = $('#section_videos .sub_section_tabs ul').find(".active");
-	//$(ubertab).find("a").text("Vids");
-	$(ubertab).removeClass("active");
-	$(".tab-pane.active").removeClass("active");
-	$('#section_videos .sub_section_tabs ul').append('<li class="active"><a href="#cExodus_videofeed" data-toggle="pill" data-bind="click_sound: \'default\', rollover_sound: \'default\'" style="overflow: visible; max-height: 40px; padding-top: 4px;"><img src="coui://ui/mods/cExodus/img/logo_small.png" width="32"/></a></li>');
-	$('.tab-content').append("<div id='cExodus_videofeed' class='tab-pane active'><div id='cExodus_ytv-wrapper'></div></div>");
+	$('.tab_content').prepend('<div class="full_update" data-bind="visible: showExodusVideos"><div class="section_header">eXodus Videos</div><div id="exodusvideo"><div class="ytv-wrapper" id="cExodus_ytv-wrapper"><div class="null-msg"><loc>Video list could not be retrieved.</loc></div></div></div></div>'); 
+	$('.tab_controls').prepend('<div class="community_tab btn_std_ix" data-placement="top" data-bind="click: toggleExodusVideosTab, click_sound: \'default\', rollover_sound: \'default\', css: { \'active\': $root.showExodusVideos() }, tooltip: \'eXodus Videos\'"><img src="coui://ui/mods/cExodus/img/logo_small.png" width="32"/></div>')
 
 	// Load videos
     $("#cExodus_ytv-wrapper").ytv({
@@ -19,14 +23,6 @@
         controls: false,
         annotations: false
     });
-	/*
-    // YTV never seems to fire it's videoReady event, so this detects the creation of the video list and performs a resize
-	$('#cExodus_videofeed').on('DOMNodeInserted', function (e) {
-		if ($(e.target).is('.cExodus_ytv-relative')) {
-			$("#cExodus_videofeed .cExodus_ytv-list").height($(window).height() - 68);
-			$("#cExodus_videofeed a").attr('data-bind', "click_sound: 'default', rollover_sound: 'default'");
-		}
-    });
-	*/
+
 
 })();

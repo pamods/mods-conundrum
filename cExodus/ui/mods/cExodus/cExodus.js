@@ -24,6 +24,7 @@ var cExodus = (function () {
 	cExodus.nextEvent_date = ko.observable();
 	cExodus.nextEvent_time = ko.observable();
 	cExodus.nextEvent_title = ko.observable();
+	cExodus.nextEvent_link = ko.observable();
 
 	cExodus.nextEvent = ko.computed(function() {
 		var eventSchedule = cExodus.eventSchedule();
@@ -50,6 +51,7 @@ var cExodus = (function () {
 			cExodus.nextEvent_date(new Date(parse_yyyymmdd(nextEvent.meta.tournament_date)).getTime());
 			cExodus.nextEvent_time(from_utc_time_string(nextEvent.meta.tournament_starttime));
 			cExodus.nextEvent_title(nextEvent.title);
+			cExodus.nextEvent_link(nextEvent.link);
 		}
 
 		return nextEvent;
