@@ -352,7 +352,7 @@
 
 
 #tournament-count-down {
-  /*background-color: rgba(40, 40, 40, 0.8);*/
+  background-color: rgba(40, 40, 40, 0.8);
   text-align: center;
   margin-bottom: 15px;
   position: absolute;
@@ -413,4 +413,5 @@
 	font-size: 14px;
 	max-width: 200px;
 	text-align: left;
+  color: #ffce14;
 }
