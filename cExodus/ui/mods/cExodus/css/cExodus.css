@@ -46,6 +46,10 @@
 
 }
 
+div#start_column {
+	z-index: 999;
+}
+
 #cExodus {
 	position: absolute;
 	top: 60px;
