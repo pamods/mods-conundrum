@@ -1,0 +1,22 @@
+{
+    "context": "client",
+    "identifier": "com.pa.conundrum.cClassicMusic",
+    "display_name": "Classic Soundtrack For Titans",
+    "description": "Switch PA back to using the original soundtrack from PA:C.",
+    "author": "Captain Conundrum",
+    "version": "1.0.0",
+    "build": "87296",
+    "date": "2016/03/28",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/rel-classic-soundtrack-for-titans.71569/",
+    "category": [
+        "soundtrack"
+    ],
+    "scenes": {
+
+    },
+    "id": "cClassicMusic",
+    "icon": "http://i.imgur.com/ggFokB4.png",
+    "priority": 100,
+    "enabled": true
+}
