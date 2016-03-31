@@ -256,7 +256,7 @@ var cExodus = (function () {
 
 (function() {
 	$("body").append("<div id='tournament-count-down'></div>");
-	cExodus.loadHtmlTemplate($("#tournament-count-down"), "coui://ui/mods/cExodus/tabs/countdown.html");
+	cExodus.loadHtmlTemplate($("#tournament-count-down"), "coui://ui/mods/cexodus/tabs/countdown.html");
 
 	$("body").append("<div id='cExodus'></div>");
 	cExodus.loadHtmlTemplate($("#cExodus"), "coui://ui/mods/cExodus/tabs/cexodus_html.html");
