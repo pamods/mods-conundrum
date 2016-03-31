@@ -1,0 +1,24 @@
+{
+    "context": "client",
+    "identifier": "com.pa.trialq.tinfinitebuild",
+    "display_name": "Infinite Build",
+    "description": "Sets all factories to infinite build by default",
+    "author": "trialq, Captain Conundrum",
+    "version": "2.0.0",
+    "build": "89755",
+    "date": "2016/03/31",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/64417/",
+    "icon": "http://pa-mods.com/misc/tInfiniteBuild.png",
+    "category": [
+        "in-game",
+        "ui"
+    ],
+    "scenes": {
+        "live_game": [
+            "coui://ui/mods/tInfiniteBuild/live_game/init.js"
+        ]
+    },
+    "priority": 100,
+    "enabled": true
+}

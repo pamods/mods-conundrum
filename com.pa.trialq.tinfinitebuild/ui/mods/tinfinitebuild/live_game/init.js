@@ -1,0 +1,1 @@
+model.selection.subscribe(function() { model.selectedMobile() == false && model.selectionBuildStanceContinuous(); });
