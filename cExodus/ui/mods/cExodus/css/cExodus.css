@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'orbitron';
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.eot');
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.woff') format('woff'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.ttf') format('truetype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-regular-webfont.svg#orbitronregular') format('svg');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-regular-webfont.eot');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-regular-webfont.woff') format('woff'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-regular-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-regular-webfont.svg#orbitronregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -12,11 +12,11 @@
 
 @font-face {
     font-family: 'orbitron';
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.eot');
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.woff') format('woff'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.ttf') format('truetype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-bold-webfont.svg#orbitronbold') format('svg');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-bold-webfont.eot');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-bold-webfont.woff') format('woff'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-bold-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-bold-webfont.svg#orbitronbold') format('svg');
     font-weight: 700;
     font-style: normal;
 
@@ -24,11 +24,11 @@
 
 @font-face {
     font-family: 'orbitron';
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.eot');
-    src: url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.woff') format('woff'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.ttf') format('truetype'),
-    url('coui://ui/mods/cExodus/fonts/orbitron-black-webfont.svg#orbitronbold') format('svg');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-black-webfont.eot');
+    src: url('coui://ui/mods/cexodus/fonts/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-black-webfont.woff') format('woff'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-black-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cexodus/fonts/orbitron-black-webfont.svg#orbitronbold') format('svg');
     font-weight: 900;
     font-style: normal;
 
@@ -36,11 +36,11 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.eot');
-    src: url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.woff') format('woff'),
-    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.ttf') format('truetype'),
-    url('coui://ui/mods/cExodus/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    src: url('coui://ui/mods/cexodus/fonts/montserrat-regular-webfont.eot');
+    src: url('coui://ui/mods/cexodus/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('coui://ui/mods/cexodus/fonts/montserrat-regular-webfont.woff') format('woff'),
+    url('coui://ui/mods/cexodus/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+    url('coui://ui/mods/cexodus/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
