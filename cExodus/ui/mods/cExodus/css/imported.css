@@ -239,58 +239,58 @@
   transition: 0.5s;
 }
 .socialbuttons a.sbtwitter {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/twitter_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/twitter_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbtwitter:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/twitter_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/twitter_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbfacebook {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/facebook_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/facebook_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbfacebook:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/facebook_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/facebook_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbtwitch {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/twitch_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/twitch_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbtwitch:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/twitch_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/twitch_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbyoutube {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/youtube_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/youtube_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbyoutube:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/youtube_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/youtube_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbgplus {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/google-plus_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/google-plus_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbgplus:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/google-plus_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/google-plus_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbpastats {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/pastats_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/pastats_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbpastats:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/pastats_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/pastats_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbpaladder {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/paladder_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/paladder_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbpaladder:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/paladder_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/paladder_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbsteam {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/steam_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/steam_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbsteam:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/steam_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/steam_white-35.png) center no-repeat;
 }
 .socialbuttons a.sbsite {
-  background: #ffce14 url(coui://ui/mods/cExodus/img/site_black-35.png) center no-repeat;
+  background: #ffce14 url(coui://ui/mods/cexodus/img/site_black-35.png) center no-repeat;
 }
 .socialbuttons a.sbsite:hover {
-  background: #050505 url(coui://ui/mods/cExodus/img/site_white-35.png) center no-repeat;
+  background: #050505 url(coui://ui/mods/cexodus/img/site_white-35.png) center no-repeat;
 }
 .socialbuttons a:hover {
   background-color: #050505;
